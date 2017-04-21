@@ -7,6 +7,8 @@ import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
@@ -30,29 +32,30 @@ import retrofit2.http.QueryMap;
 public class UserUtil {
 
     public static void Login(String username, String password) {
-
-        String data = "{\"phone\":\"" + username + "\",\"password\":\"" + EncryptUtil.MD5Encrypt(password.getBytes()) + "\",\"rememberLogin\":\"true\"}";
-
-
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://music.163.com/weapi/login/")
+                .baseUrl("https://music.163.com/weapi/")
                 .build();
-
-        LoginService service = retrofit.create(LoginService.class);
+        UserLoginService service = retrofit.create(UserLoginService.class);
+        Pattern p = Pattern.compile("^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$");
+        Matcher m = p.matcher(username);
+        String data = "";
+        boolean phoneLogin = false;
+        if (m.matches()) {
+            phoneLogin = true;
+            data = "{\"phone\":\"" + username + "\",\"password\":\"" + EncryptUtil.MD5Encrypt(password.getBytes()) + "\",\"rememberLogin\":\"true\"}";
+        } else
+            data = "{\"username\":\"" + username + "\",\"password\":\"" + EncryptUtil.MD5Encrypt(password.getBytes()) + "\",\"rememberLogin\":\"true\"}";
         Map<String, String> text = EncryptUtil.encrypt(data);
+        Call<ResponseBody> call = null;
+        if (phoneLogin)
+            call = service.phoneLogin(text);
+        else
+            call = service.Login(text);
 
-        Call<ResponseBody> call = service.login(text);
-
-        // 用法和OkHttp的call如出一辙,
-        // 不同的是如果是Android系统回调方法执行在主线程
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                try {
-                    System.out.println(response.body().string());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                System.out.println(response.body());
             }
 
             @Override
@@ -61,26 +64,4 @@ public class UserUtil {
             }
         });
     }
-}
-
-interface LoginService {
-    @Headers({"Content-Type: application/x-www-form-urlencoded",
-            "Host: music.163.com",
-            "Referer: http://music.163.com/search/",
-            "User-Agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36"})
-    @POST("cellphone")
-    Call<ResponseBody> login(@QueryMap Map<String, String> text);
-}
-
-
-class User {
-    User(String phone, String password, String rememberLogin) {
-        this.phone = phone;
-        this.password = Base64.encodeToString("zjs19941118".getBytes(), Base64.DEFAULT);
-        this.rememberLogin = rememberLogin;
-    }
-
-    String phone;
-    String password;
-    String rememberLogin;
 }

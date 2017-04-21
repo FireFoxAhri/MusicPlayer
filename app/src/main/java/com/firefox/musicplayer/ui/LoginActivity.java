@@ -17,11 +17,6 @@ public class LoginActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_layout);
 
-        //隐藏用户标题栏
-        ActionBar actionBar=getSupportActionBar();
-        if(actionBar!=null)
-        {
-            actionBar.hide();
-        }
+        
     }
 }
