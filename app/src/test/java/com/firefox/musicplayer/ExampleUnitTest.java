@@ -1,5 +1,7 @@
 package com.firefox.musicplayer;
 
+import com.firefox.musicplayer.utils.user.UserUtil;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -12,6 +14,6 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+        UserUtil.Login("","");
     }
 }
