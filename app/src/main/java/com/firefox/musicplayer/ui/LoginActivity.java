@@ -1,5 +1,10 @@
 package com.firefox.musicplayer.ui;
 
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
+
+import com.firefox.musicplayer.R;
 import com.firefox.musicplayer.ui.base.BaseActivity;
 
 /**
@@ -7,5 +12,16 @@ import com.firefox.musicplayer.ui.base.BaseActivity;
  */
 
 public class LoginActivity extends BaseActivity {
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_layout2);
 
+        //隐藏用户标题栏
+        ActionBar actionBar=getSupportActionBar();
+        if(actionBar!=null)
+        {
+            actionBar.hide();
+        }
+    }
 }
