@@ -1,5 +1,6 @@
 package com.firefox.musicplayer.ui.main;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,8 +11,12 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import com.firefox.musicplayer.R;
+import com.firefox.musicplayer.ui.SearchActivity;
 import com.firefox.musicplayer.ui.base.BaseActivity;
 import com.firefox.musicplayer.utils.user.UserUtil;
 
@@ -20,10 +25,25 @@ import com.firefox.musicplayer.utils.user.UserUtil;
  */
 
 public class MainActivity extends BaseActivity {
+
+
+    ImageView iv_search;
+
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        iv_search= (ImageView) findViewById(R.id.bar_search);
+        iv_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this, SearchActivity.class);
+                startActivity(intent);
+            }
+        });
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -45,5 +65,9 @@ public class MainActivity extends BaseActivity {
             super.onBackPressed();
         }
     }
+
+
+
+
 
 }
