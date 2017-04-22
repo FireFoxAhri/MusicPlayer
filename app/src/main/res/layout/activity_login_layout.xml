@@ -63,8 +63,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:scaleType="fitXY"
-            android:src="@drawable/login_passwd"
-            />
+            android:src="@drawable/login_passwd" />
 
         <EditText
             android:id="@+id/et_password"
@@ -74,8 +73,8 @@
             android:layout_weight="15"
             android:background="@android:color/white"
             android:hint="请输入密码"
-            android:textColor="#b4b4b4"
             android:inputType="textPassword"
+            android:textColor="#b4b4b4"
             android:textSize="20dp" />
     </LinearLayout>
 

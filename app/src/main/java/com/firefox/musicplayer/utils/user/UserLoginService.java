@@ -18,9 +18,9 @@ public interface UserLoginService {
             "Referer: http://music.163.com/search/",
             "User-Agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36"})
 
-    @POST("login")
+    @POST("weapi/login")
     Call<ResponseBody> Login(@QueryMap Map<String, String> text);
 
-    @POST("login/cellphone")
+    @POST("weapi/login/cellphone")
     Call<ResponseBody> phoneLogin(@QueryMap Map<String, String> text);
 }

@@ -15,8 +15,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //初始化ButterKnife
-        ButterKnife.bind(this);
         //隐藏用户标题栏
         ActionBar actionBar=getSupportActionBar();
         if(actionBar!=null)

@@ -51,6 +51,7 @@ public class EncryptUtil {
 
             return Base64.encodeToString(encrypted, Base64.DEFAULT);
         } catch (Exception e) {
+            e.printStackTrace();
             return "";
         }
     }

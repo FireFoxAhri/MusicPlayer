@@ -2,6 +2,7 @@ package com.firefox.musicplayer.utils.user;
 
 import android.util.Base64;
 
+import com.firefox.musicplayer.bean.UserBean;
 import com.firefox.musicplayer.utils.encrypt.EncryptUtil;
 import com.google.gson.Gson;
 
@@ -18,6 +19,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.Header;
@@ -31,37 +33,23 @@ import retrofit2.http.QueryMap;
 
 public class UserUtil {
 
-    public static void Login(String username, String password) {
+    public static Call<ResponseBody> Login(String username, String password) {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://music.163.com/weapi/")
+                .baseUrl("https://music.163.com/")
                 .build();
         UserLoginService service = retrofit.create(UserLoginService.class);
         Pattern p = Pattern.compile("^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$");
         Matcher m = p.matcher(username);
-        String data = "";
-        boolean phoneLogin = false;
+        Map<String, String> text = null;
+
         if (m.matches()) {
-            phoneLogin = true;
-            data = "{\"phone\":\"" + username + "\",\"password\":\"" + EncryptUtil.MD5Encrypt(password.getBytes()) + "\",\"rememberLogin\":\"true\"}";
-        } else
-            data = "{\"username\":\"" + username + "\",\"password\":\"" + EncryptUtil.MD5Encrypt(password.getBytes()) + "\",\"rememberLogin\":\"true\"}";
-        Map<String, String> text = EncryptUtil.encrypt(data);
-        Call<ResponseBody> call = null;
-        if (phoneLogin)
-            call = service.phoneLogin(text);
-        else
-            call = service.Login(text);
-
-        call.enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                System.out.println(response.body());
-            }
-
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-                t.printStackTrace();
-            }
-        });
+            String data = "{\"phone\":\"" + username + "\",\"password\":\"" + EncryptUtil.MD5Encrypt(password.getBytes()) + "\",\"rememberLogin\":\"true\"}";
+            text = EncryptUtil.encrypt(data);
+            return service.phoneLogin(text);
+        } else {
+            String data = "{\"username\":\"" + username + "\",\"password\":\"" + EncryptUtil.MD5Encrypt(password.getBytes()) + "\",\"rememberLogin\":\"true\"}";
+            text = EncryptUtil.encrypt(data);
+            return service.Login(text);
+        }
     }
 }
