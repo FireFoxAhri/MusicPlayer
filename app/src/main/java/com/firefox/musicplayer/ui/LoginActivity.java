@@ -2,6 +2,7 @@ package com.firefox.musicplayer.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -43,6 +44,7 @@ public class LoginActivity extends BaseActivity {
                 Gson gson = new Gson();
                 try {
                     UserBean user = gson.fromJson(response.body().string(), UserBean.class);
+                    Log.v("2333....", String.valueOf(user.getCode()));
                     if (user.getCode() == 200) {
                         Toast.makeText(getApplicationContext(), "登录成功！", Toast.LENGTH_SHORT).show();
                     } else if (user.getCode() == 502) {
