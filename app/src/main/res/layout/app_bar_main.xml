@@ -15,7 +15,9 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary">
+            android:background="?attr/colorPrimary"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -48,8 +50,8 @@
 
                 <ImageView
                     android:id="@+id/bar_search"
-                    android:layout_width="23dp"
-                    android:layout_height="23dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:background="@drawable/actionbar_search"
