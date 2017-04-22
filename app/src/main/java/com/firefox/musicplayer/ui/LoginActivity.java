@@ -2,6 +2,7 @@ package com.firefox.musicplayer.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
@@ -67,6 +68,8 @@ public class LoginActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_layout);
         ButterKnife.bind(this);
+
+
     }
 
 
