@@ -15,8 +15,47 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:background="?attr/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/bar_net"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:layout_toStartOf="@+id/bar_music"
+                    android:background="@drawable/actionbar_disco"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:id="@+id/bar_music"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/actionbar_music"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:id="@+id/bar_friends"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/bar_music"
+                    android:background="@drawable/actionbar_friends"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:id="@+id/bar_search"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/actionbar_search"
+                    android:scaleType="center" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
 
