@@ -8,6 +8,7 @@ import java.util.List;
 
 public class UserBean {
 
+
     /**
      * loginType : 1
      * code : 200
@@ -490,9 +491,9 @@ public class UserBean {
         private int userId;
         private String tokenJsonStr;
         private boolean expired;
-        private int refreshTime;
-        private int expiresIn;
-        private int id;
+        private long refreshTime;
+        private long expiresIn;
+        private long id;
         private int type;
 
         public String getUrl() {
@@ -527,27 +528,27 @@ public class UserBean {
             this.expired = expired;
         }
 
-        public int getRefreshTime() {
+        public long getRefreshTime() {
             return refreshTime;
         }
 
-        public void setRefreshTime(int refreshTime) {
+        public void setRefreshTime(long refreshTime) {
             this.refreshTime = refreshTime;
         }
 
-        public int getExpiresIn() {
+        public long getExpiresIn() {
             return expiresIn;
         }
 
-        public void setExpiresIn(int expiresIn) {
+        public void setExpiresIn(long expiresIn) {
             this.expiresIn = expiresIn;
         }
 
-        public int getId() {
+        public long getId() {
             return id;
         }
 
-        public void setId(int id) {
+        public void setId(long id) {
             this.id = id;
         }
 

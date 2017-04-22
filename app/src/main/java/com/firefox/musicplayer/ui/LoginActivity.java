@@ -4,16 +4,15 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.firefox.musicplayer.R;
 import com.firefox.musicplayer.bean.UserBean;
 import com.firefox.musicplayer.ui.base.BaseActivity;
 import com.firefox.musicplayer.utils.user.UserUtil;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
-import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -42,29 +41,21 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 Gson gson = new Gson();
-                System.out.println(response.code());
-                if (response.code() == 200) {
-                    try {
-                        UserBean user = gson.fromJson(response.body().string(), UserBean.class);
-                        System.out.println(user.toString());
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                try {
+                    UserBean user = gson.fromJson(response.body().string(), UserBean.class);
+                    if (user.getCode() == 200) {
+                        Toast.makeText(getApplicationContext(), "登录成功！", Toast.LENGTH_SHORT).show();
+                    } else if (user.getCode() == 502) {
+                        Toast.makeText(getApplicationContext(), "密码错误！", Toast.LENGTH_SHORT).show();
                     }
-                } else if (response.code() == 502) {
-                    try {
-                        Map<String, String> errMsg = gson.fromJson(response.body().string(), new TypeToken<Map<String, String>>() {
-                        }.getType());
-                        System.out.println(errMsg.get("msg"));
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-
+                Toast.makeText(getApplicationContext(), "登录失败！", Toast.LENGTH_SHORT).show();
             }
         });
     }
