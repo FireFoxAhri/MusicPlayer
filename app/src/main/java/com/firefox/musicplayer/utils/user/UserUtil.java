@@ -1,31 +1,20 @@
 package com.firefox.musicplayer.utils.user;
 
-import android.util.Base64;
-
-import com.firefox.musicplayer.bean.UserBean;
 import com.firefox.musicplayer.utils.encrypt.EncryptUtil;
-import com.google.gson.Gson;
+import com.firefox.musicplayer.utils.net.PersistentCookieStore;
 
-import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import okhttp3.MediaType;
+import okhttp3.Cookie;
+import okhttp3.CookieJar;
+import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.Body;
-import retrofit2.http.Field;
-import retrofit2.http.Header;
-import retrofit2.http.Headers;
-import retrofit2.http.POST;
-import retrofit2.http.QueryMap;
 
 /**
  * Created by FireFox on 2017/4/20.
@@ -34,7 +23,22 @@ import retrofit2.http.QueryMap;
 public class UserUtil {
 
     public static Call<ResponseBody> Login(String username, String password) {
+        OkHttpClient client=new OkHttpClient.Builder()
+                .cookieJar(new CookieJar() {
+                    @Override
+                    public void saveFromResponse(HttpUrl url, List<Cookie> cookies) {
+
+                    }
+
+                    @Override
+                    public List<Cookie> loadForRequest(HttpUrl url) {
+                        return null;
+                    }
+                })
+                .build();
+
         Retrofit retrofit = new Retrofit.Builder()
+                .client(client)
                 .baseUrl("https://music.163.com/")
                 .build();
         UserLoginService service = retrofit.create(UserLoginService.class);
@@ -43,11 +47,11 @@ public class UserUtil {
         Map<String, String> text = null;
 
         if (m.matches()) {
-            String data = "{\"phone\":\"" + username + "\",\"password\":\"" + EncryptUtil.MD5Encrypt(password.getBytes()) + "\",\"rememberLogin\":\"true\"}";
+            String data = String.format("{\"phone\":\"%s\",\"password\":\"%s\",\"rememberLogin\":\"true\"}", username, EncryptUtil.MD5Encrypt(password.getBytes()));
             text = EncryptUtil.encrypt(data);
             return service.phoneLogin(text);
         } else {
-            String data = "{\"username\":\"" + username + "\",\"password\":\"" + EncryptUtil.MD5Encrypt(password.getBytes()) + "\",\"rememberLogin\":\"true\"}";
+            String data = String.format("{\"username\":\"%s\",\"password\":\"%s\",\"rememberLogin\":\"true\"}", username, EncryptUtil.MD5Encrypt(password.getBytes()));
             text = EncryptUtil.encrypt(data);
             return service.Login(text);
         }

@@ -38,7 +38,10 @@ public class MainFragmentAdapter extends RecyclerView.Adapter<MainFragmentAdapte
     public MainFragmentAdapter(Context context) {
         this.mContext = context;
     }
-
+    public void updateResults(ArrayList itemResults) {
+        isLoveList = true;
+        this.itemResults = itemResults;
+    }
 
     @Override
     public ItemHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {

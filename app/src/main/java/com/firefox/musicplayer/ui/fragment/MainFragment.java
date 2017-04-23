@@ -76,7 +76,13 @@ public class MainFragment extends BaseFragment {
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(final Void... unused) {
+                ArrayList results = new ArrayList();
                 loadCount(true);
+                results.addAll(mList);
+                if(mAdapter == null){
+                    mAdapter = new MainFragmentAdapter(mContext);
+                }
+                mAdapter.updateResults(results);
                 return null;
             }
 
