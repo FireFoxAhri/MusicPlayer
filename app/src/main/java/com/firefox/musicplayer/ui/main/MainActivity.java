@@ -1,7 +1,6 @@
 package com.firefox.musicplayer.ui.main;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,16 +11,13 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.firefox.musicplayer.R;
 import com.firefox.musicplayer.ui.SearchActivity;
 import com.firefox.musicplayer.ui.base.BaseActivity;
+import com.firefox.musicplayer.ui.fragment.FirstFragment;
 import com.firefox.musicplayer.ui.fragment.MainFragment;
 import com.firefox.musicplayer.widget.CustomViewPager;
 
@@ -55,8 +51,6 @@ public class MainActivity extends BaseActivity {
         startActivity(intent);
     }
 
-    ImageView iv_search;
-    ImageView iv_net;
 
     private ArrayList<ImageView> tabs = new ArrayList<>();
 
@@ -64,7 +58,9 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+        ButterKnife.bind(this)
+
+        ;
 
 
         setToolBar();
@@ -84,24 +80,6 @@ public class MainActivity extends BaseActivity {
     }
 
     private void setToolBar() {
-        iv_net = (ImageView) findViewById(R.id.bar_net);
-        iv_net.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-//        Button bt=(Button)findViewById(R.id.bt_new_songs);
-//        bt.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(MainActivity.this, "gdsfgdsfg", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-
-
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar ab = getSupportActionBar();
@@ -116,13 +94,18 @@ public class MainActivity extends BaseActivity {
     }
 
     private void setViewPager() {
-        // tabs.add(barNet);
+        tabs.add(barNet);
         tabs.add(barMusic);
+
+        final FirstFragment firstFragment = new FirstFragment();
         final MainFragment mainFragment = new MainFragment();
+
         CustomViewPagerAdapter customViewPagerAdapter = new CustomViewPagerAdapter(getSupportFragmentManager());
+        customViewPagerAdapter.addFragment(firstFragment);
         customViewPagerAdapter.addFragment(mainFragment);
+//        System.out.println(customViewPagerAdapter.getCount());
         mainViewpager.setAdapter(customViewPagerAdapter);
-        mainViewpager.setCurrentItem(1);
+        mainViewpager.setCurrentItem(0);
         barMusic.setSelected(true);
     }
 
