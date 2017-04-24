@@ -13,9 +13,11 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.firefox.musicplayer.R;
 import com.firefox.musicplayer.ui.SearchActivity;
 import com.firefox.musicplayer.ui.base.BaseActivity;
+import com.firefox.musicplayer.ui.fragment.FirstFragment;
 import com.firefox.musicplayer.ui.fragment.MainFragment;
 import com.firefox.musicplayer.widget.CustomViewPager;
 
@@ -56,7 +58,9 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+        ButterKnife.bind(this)
+
+        ;
 
 
         setToolBar();
@@ -90,13 +94,18 @@ public class MainActivity extends BaseActivity {
     }
 
     private void setViewPager() {
-        // tabs.add(barNet);
+        tabs.add(barNet);
         tabs.add(barMusic);
+
+        final FirstFragment firstFragment = new FirstFragment();
         final MainFragment mainFragment = new MainFragment();
+
         CustomViewPagerAdapter customViewPagerAdapter = new CustomViewPagerAdapter(getSupportFragmentManager());
+        customViewPagerAdapter.addFragment(firstFragment);
         customViewPagerAdapter.addFragment(mainFragment);
+//        System.out.println(customViewPagerAdapter.getCount());
         mainViewpager.setAdapter(customViewPagerAdapter);
-        mainViewpager.setCurrentItem(1);
+        mainViewpager.setCurrentItem(0);
         barMusic.setSelected(true);
     }
 
@@ -117,9 +126,14 @@ public class MainActivity extends BaseActivity {
             return mFragments.get(position);
         }
 
+
         @Override
         public int getCount() {
             return mFragments.size();
         }
     }
 }
+
+
+
+
