@@ -1,9 +1,14 @@
 package com.firefox.musicplayer.utils.user;
 
+import com.firefox.musicplayer.MainApplication;
 import com.firefox.musicplayer.utils.encrypt.EncryptUtil;
+import com.firefox.musicplayer.utils.net.AddCookiesInterceptor;
+import com.firefox.musicplayer.utils.net.PersistentCookieJar;
 import com.firefox.musicplayer.utils.net.PersistentCookieStore;
+import com.firefox.musicplayer.utils.net.ReceivedCookiesInterceptor;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -21,20 +26,44 @@ import retrofit2.Retrofit;
  */
 
 public class UserUtil {
+    public static Call<ResponseBody> userInfo(int userID) {
+        OkHttpClient client = new OkHttpClient.Builder()
+                .cookieJar(new PersistentCookieJar())
+                .build();
 
-    public static Call<ResponseBody> Login(String username, String password) {
-        OkHttpClient client=new OkHttpClient.Builder()
-                .cookieJar(new CookieJar() {
-                    @Override
-                    public void saveFromResponse(HttpUrl url, List<Cookie> cookies) {
+        Retrofit retrofit = new Retrofit.Builder()
+                .client(client)
+                .baseUrl("https://music.163.com/")
+                .build();
+        UserLoginService service = retrofit.create(UserLoginService.class);
+        String data = String.format("{\"userId\":\"%d\",\"csrf_token\":\"\"}", userID);
+        Map<String, String> text = EncryptUtil.encrypt(data);
+        return service.userInfo(text);
+    }
 
-                    }
+    public static Call<ResponseBody> SignIn(int type) {
 
-                    @Override
-                    public List<Cookie> loadForRequest(HttpUrl url) {
-                        return null;
-                    }
-                })
+        OkHttpClient client = new OkHttpClient.Builder()
+                //.cookieJar(new PersistentCookieJar())
+                .addInterceptor(new ReceivedCookiesInterceptor(MainApplication.getInstance()))
+                .addInterceptor(new AddCookiesInterceptor(MainApplication.getInstance(), ""))
+                .build();
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .client(client)
+                .baseUrl("https://music.163.com/")
+                .build();
+        UserLoginService service = retrofit.create(UserLoginService.class);
+        String data = String.format("{\"type\":1}");
+        Map<String, String> text = EncryptUtil.encrypt(data);
+        return service.userInfo(text);
+    }
+
+    public static Call<ResponseBody> Login(String username, final String password) {
+        OkHttpClient client = new OkHttpClient.Builder()
+                //.cookieJar(new PersistentCookieJar())
+                .addInterceptor(new ReceivedCookiesInterceptor(MainApplication.getInstance()))
+                .addInterceptor(new AddCookiesInterceptor(MainApplication.getInstance(), ""))
                 .build();
 
         Retrofit retrofit = new Retrofit.Builder()
