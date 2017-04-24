@@ -1,19 +1,10 @@
 package com.firefox.musicplayer.utils.music;
 
 import com.firefox.musicplayer.MainApplication;
-import com.firefox.musicplayer.bean.RecommendPlaylistBean;
-import com.firefox.musicplayer.bean.ResultBean;
-import com.firefox.musicplayer.bean.SongsBean;
 import com.firefox.musicplayer.utils.encrypt.EncryptUtil;
 import com.firefox.musicplayer.utils.net.PersistentCookieJar;
 import com.firefox.musicplayer.utils.net.PersistentCookieStore;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;

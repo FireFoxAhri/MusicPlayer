@@ -8,12 +8,6 @@ import java.util.List;
 
 public class RecommendMusicBean {
 
-    /**
-     * code : 200
-     * category : 5
-     * result : [{"id":473817900,"type":4,"name":"Promise","copywriter":null,"picUrl":null,"canDislike":false,"song":{"name":"Promise","id":473817900,"position":1,"alias":[],"status":0,"fee":0,"copyrightId":0,"disc":"","no":0,"artists":[{"name":"黄子韬","id":1025202,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"album":{"name":"Promise","id":35424183,"type":"EP/Single","size":1,"picId":19133701346646512,"blurPicUrl":"http://p4.music.126.net/W4MHAGscFtizbTlnOUnboA==/19133701346646512.jpg","companyId":0,"pic":19133701346646512,"picUrl":"http://p4.music.126.net/W4MHAGscFtizbTlnOUnboA==/19133701346646512.jpg","publishTime":1492963200007,"description":"","tags":"","company":"黄子韬工作室","briefDesc":"","artist":{"name":"","id":0,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0},"songs":[],"alias":[],"status":0,"copyrightId":0,"commentThreadId":"R_AL_3_35424183","artists":[{"name":"黄子韬","id":1025202,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"picId_str":"19133701346646512"},"starred":false,"popularity":75,"score":75,"starredNum":0,"duration":240613,"playedNum":0,"dayPlays":0,"hearTime":0,"ringtone":null,"crbt":null,"audition":null,"copyFrom":"","commentThreadId":"R_SO_4_473817900","rtUrl":null,"ftype":0,"rtUrls":[],"copyright":2,"mvid":0,"bMusic":{"name":null,"id":1304626568,"size":2888038,"extension":"mp3","sr":44100,"dfsId":18731280092679088,"bitrate":96000,"playTime":240613,"volumeDelta":-1.71,"dfsId_str":"18731280092679088"},"mp3Url":"http://m2.music.126.net/T-zIrluykz3ICEeJcz7GWA==/18731280092679088.mp3","hMusic":{"name":null,"id":1304626566,"size":9626689,"extension":"mp3","sr":44100,"dfsId":18498183627588909,"bitrate":320000,"playTime":240613,"volumeDelta":-1.99,"dfsId_str":"18498183627588909"},"mMusic":{"name":null,"id":1304626567,"size":4813367,"extension":"mp3","sr":44100,"dfsId":18597139674085252,"bitrate":160000,"playTime":240613,"volumeDelta":-1.63,"dfsId_str":"18597139674085252"},"lMusic":{"name":null,"id":1304626568,"size":2888038,"extension":"mp3","sr":44100,"dfsId":18731280092679088,"bitrate":96000,"playTime":240613,"volumeDelta":-1.71,"dfsId_str":"18731280092679088"},"rurl":null,"rtype":0,"privilege":{"id":473817900,"fee":0,"payed":0,"st":0,"pl":320000,"dl":320000,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":999000,"fl":320000,"toast":false,"flag":0}},"alg":"featured"},{"id":473940122,"type":4,"name":"不冷不热 ","copywriter":null,"picUrl":null,"canDislike":false,"song":{"name":"不冷不热 ","id":473940122,"position":1,"alias":[],"status":0,"fee":0,"copyrightId":0,"disc":"","no":0,"artists":[{"name":"Panta.Q","id":1050465,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"album":{"name":"不冷不热","id":35424155,"type":"EP/Single","size":1,"picId":19140298416417160,"blurPicUrl":"http://p4.music.126.net/KJWobykP41_vLUSLe3SL1g==/19140298416417160.jpg","companyId":0,"pic":19140298416417160,"picUrl":"http://p4.music.126.net/KJWobykP41_vLUSLe3SL1g==/19140298416417160.jpg","publishTime":1492963200007,"description":"","tags":"","company":"","briefDesc":"","artist":{"name":"","id":0,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0},"songs":[],"alias":[],"status":0,"copyrightId":0,"commentThreadId":"R_AL_3_35424155","artists":[{"name":"Panta.Q","id":1050465,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"picId_str":"19140298416417160"},"starred":false,"popularity":0,"score":0,"starredNum":0,"duration":234125,"playedNum":0,"dayPlays":0,"hearTime":0,"ringtone":null,"crbt":null,"audition":null,"copyFrom":"","commentThreadId":"R_SO_4_473940122","rtUrl":null,"ftype":0,"rtUrls":[],"copyright":2,"mvid":0,"bMusic":{"name":null,"id":1305028000,"size":2810298,"extension":"mp3","sr":44100,"dfsId":18981968742022818,"bitrate":96000,"playTime":234125,"volumeDelta":-0.53,"dfsId_str":"18981968742022818"},"mp3Url":"http://m2.music.126.net/e8Jl_zwEek1WfJp0wJTwuA==/18981968742022818.mp3","hMusic":{"name":null,"id":1305027998,"size":9367554,"extension":"mp3","sr":44100,"dfsId":19123805742009301,"bitrate":320000,"playTime":234125,"volumeDelta":-0.83,"dfsId_str":"19123805742009301"},"mMusic":{"name":null,"id":1305027999,"size":4683800,"extension":"mp3","sr":44100,"dfsId":19029247742014422,"bitrate":160000,"playTime":234125,"volumeDelta":-0.43,"dfsId_str":"19029247742014422"},"lMusic":{"name":null,"id":1305028000,"size":2810298,"extension":"mp3","sr":44100,"dfsId":18981968742022818,"bitrate":96000,"playTime":234125,"volumeDelta":-0.53,"dfsId_str":"18981968742022818"},"rurl":null,"rtype":0,"privilege":{"id":473940122,"fee":0,"payed":0,"st":0,"pl":320000,"dl":320000,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":999000,"fl":320000,"toast":false,"flag":2}},"alg":"featured"},{"id":473940410,"type":4,"name":"Sunny Day","copywriter":null,"picUrl":null,"canDislike":false,"song":{"name":"Sunny Day","id":473940410,"position":1,"alias":["电视剧《繁星四月》插曲"],"status":0,"fee":8,"copyrightId":419013,"disc":"","no":0,"artists":[{"name":"刘维","id":229341,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"album":{"name":"Sunny Day","id":35424198,"type":"EP/Single","size":1,"picId":19113910137355540,"blurPicUrl":"http://p4.music.126.net/5B-C0UnAomF5lKiCER2xuA==/19113910137355540.jpg","companyId":0,"pic":19113910137355540,"picUrl":"http://p3.music.126.net/5B-C0UnAomF5lKiCER2xuA==/19113910137355540.jpg","publishTime":1492963200007,"description":"","tags":"","company":"大象音乐","briefDesc":"","artist":{"name":"","id":0,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0},"songs":[],"alias":["电视剧《繁星四月》插曲"],"status":1,"copyrightId":419013,"commentThreadId":"R_AL_3_35424198","artists":[{"name":"刘维","id":229341,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"picId_str":"19113910137355540"},"starred":false,"popularity":0,"score":0,"starredNum":0,"duration":207428,"playedNum":0,"dayPlays":0,"hearTime":0,"ringtone":null,"crbt":null,"audition":null,"copyFrom":"","commentThreadId":"R_SO_4_473940410","rtUrl":null,"ftype":0,"rtUrls":[],"copyright":2,"mvid":0,"bMusic":{"name":null,"id":1304594877,"size":2489932,"extension":"mp3","sr":44100,"dfsId":19221662276872642,"bitrate":96000,"playTime":207428,"volumeDelta":-3.76,"dfsId_str":"19221662276872642"},"mp3Url":"http://m2.music.126.net/6uDxpoyxmervW8bLUXwFCg==/19221662276872642.mp3","hMusic":{"name":null,"id":1304594875,"size":8299668,"extension":"mp3","sr":44100,"dfsId":19197473021061565,"bitrate":320000,"playTime":207428,"volumeDelta":-4.06,"dfsId_str":"19197473021061565"},"mMusic":{"name":null,"id":1304594876,"size":4149857,"extension":"mp3","sr":44100,"dfsId":19054536509450989,"bitrate":160000,"playTime":207428,"volumeDelta":-3.66,"dfsId_str":"19054536509450989"},"lMusic":{"name":null,"id":1304594877,"size":2489932,"extension":"mp3","sr":44100,"dfsId":19221662276872642,"bitrate":96000,"playTime":207428,"volumeDelta":-3.76,"dfsId_str":"19221662276872642"},"rurl":null,"rtype":0,"privilege":{"id":473940410,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":999000,"fl":128000,"toast":false,"flag":0}},"alg":"featured"},{"id":474567208,"type":4,"name":"????","copywriter":null,"picUrl":null,"canDislike":false,"song":{"name":"????","id":474567208,"position":3,"alias":[],"status":0,"fee":8,"copyrightId":14004,"disc":"","no":3,"artists":[{"name":"hyukoh","id":1054167,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"album":{"name":"23","id":35430042,"type":"专辑","size":12,"picId":18926993160633418,"blurPicUrl":"http://p4.music.126.net/UPny8fU1E_SJucyOktgauw==/18926993160633418.jpg","companyId":0,"pic":18926993160633418,"picUrl":"http://p4.music.126.net/UPny8fU1E_SJucyOktgauw==/18926993160633418.jpg","publishTime":1492963200007,"description":"","tags":"","company":"(?)KT??","briefDesc":"","artist":{"name":"","id":0,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0},"songs":[],"alias":[],"status":3,"copyrightId":14004,"commentThreadId":"R_AL_3_35430042","artists":[{"name":"hyukoh","id":1054167,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"picId_str":"18926993160633418"},"starred":false,"popularity":0,"score":0,"starredNum":0,"duration":222630,"playedNum":0,"dayPlays":0,"hearTime":0,"ringtone":null,"crbt":null,"audition":null,"copyFrom":"","commentThreadId":"R_SO_4_474567208","rtUrl":null,"ftype":0,"rtUrls":[],"copyright":0,"mvid":5497055,"bMusic":{"name":null,"id":1305179412,"size":2672371,"extension":"mp3","sr":44100,"dfsId":18634523069425582,"bitrate":96000,"playTime":222630,"volumeDelta":-2.66,"dfsId_str":"18634523069425582"},"mp3Url":"http://m2.music.126.net/LjjEFWQDlqSGe1gXX4Dfdg==/18634523069425582.mp3","hMusic":{"name":null,"id":1305179410,"size":8907799,"extension":"mp3","sr":44100,"dfsId":19067730648987224,"bitrate":320000,"playTime":222630,"volumeDelta":-2.99,"dfsId_str":"19067730648987224"},"mMusic":{"name":null,"id":1305179411,"size":4453922,"extension":"mp3","sr":44100,"dfsId":18919296579238715,"bitrate":160000,"playTime":222630,"volumeDelta":-2.57,"dfsId_str":"18919296579238715"},"lMusic":{"name":null,"id":1305179412,"size":2672371,"extension":"mp3","sr":44100,"dfsId":18634523069425582,"bitrate":96000,"playTime":222630,"volumeDelta":-2.66,"dfsId_str":"18634523069425582"},"rurl":null,"rtype":0,"transNames":["Leather Jacket"],"privilege":{"id":474567208,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":999000,"fl":128000,"toast":false,"flag":0}},"alg":"featured"},{"id":472137125,"type":4,"name":"Lettes To America","copywriter":null,"picUrl":null,"canDislike":false,"song":{"name":"Lettes To America","id":472137125,"position":0,"alias":[],"status":0,"fee":8,"copyrightId":36003,"disc":"","no":13,"artists":[{"name":"Abi F Jones","id":1137160,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0},{"name":"BORN CRAIN","id":0,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"album":{"name":"From The Dark","id":35369223,"type":"专辑","size":12,"picId":18497084115960374,"blurPicUrl":"http://p3.music.126.net/ddDjQzsW0xnTCACPRURSOw==/18497084115960374.jpg","companyId":0,"pic":18497084115960374,"picUrl":"http://p4.music.126.net/ddDjQzsW0xnTCACPRURSOw==/18497084115960374.jpg","publishTime":1492963200007,"description":"","tags":"","company":"奇大音乐","briefDesc":"","artist":{"name":"","id":0,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0},"songs":[],"alias":[],"status":1,"copyrightId":36003,"commentThreadId":"R_AL_3_35369223","artists":[{"name":"Abi F Jones","id":1137160,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"picId_str":"18497084115960374"},"starred":false,"popularity":0,"score":0,"starredNum":0,"duration":202760,"playedNum":0,"dayPlays":0,"hearTime":0,"ringtone":null,"crbt":null,"audition":null,"copyFrom":"","commentThreadId":"R_SO_4_472137125","rtUrl":null,"ftype":0,"rtUrls":[],"copyright":2,"mvid":0,"bMusic":{"name":null,"id":1302280612,"size":2433821,"extension":"mp3","sr":44100,"dfsId":18766464464761386,"bitrate":96000,"playTime":202760,"volumeDelta":-0.46,"dfsId_str":"18766464464761386"},"mp3Url":"http://m2.music.126.net/wtNzWcyyUUbUdLhi8wjCSw==/18766464464761386.mp3","hMusic":{"name":null,"id":1302280610,"size":8112631,"extension":"mp3","sr":44100,"dfsId":18898405858294750,"bitrate":320000,"playTime":202760,"volumeDelta":-0.83,"dfsId_str":"18898405858294750"},"mMusic":{"name":null,"id":1302280611,"size":4056338,"extension":"mp3","sr":44100,"dfsId":18534467511301645,"bitrate":160000,"playTime":202760,"volumeDelta":-0.4,"dfsId_str":"18534467511301645"},"lMusic":{"name":null,"id":1302280612,"size":2433821,"extension":"mp3","sr":44100,"dfsId":18766464464761386,"bitrate":96000,"playTime":202760,"volumeDelta":-0.46,"dfsId_str":"18766464464761386"},"rurl":null,"rtype":0,"privilege":{"id":472137125,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":999000,"fl":128000,"toast":false,"flag":0}},"alg":"featured"},{"id":474567208,"type":4,"name":"????","copywriter":null,"picUrl":null,"canDislike":true,"song":{"name":"????","id":474567208,"position":3,"alias":[],"status":0,"fee":8,"copyrightId":14004,"disc":"","no":3,"artists":[{"name":"hyukoh","id":1054167,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"album":{"name":"23","id":35430042,"type":"专辑","size":12,"picId":18926993160633418,"blurPicUrl":"http://p1.music.126.net/UPny8fU1E_SJucyOktgauw==/18926993160633418.jpg","companyId":0,"pic":18926993160633418,"picUrl":"http://p1.music.126.net/UPny8fU1E_SJucyOktgauw==/18926993160633418.jpg","publishTime":1492963200007,"description":"","tags":"","company":"(?)KT??","briefDesc":"","artist":{"name":"","id":0,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0},"songs":[],"alias":[],"status":3,"copyrightId":14004,"commentThreadId":"R_AL_3_35430042","artists":[{"name":"hyukoh","id":1054167,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"picId_str":"18926993160633418"},"starred":false,"popularity":0,"score":0,"starredNum":0,"duration":222630,"playedNum":0,"dayPlays":0,"hearTime":0,"ringtone":null,"crbt":null,"audition":null,"copyFrom":"","commentThreadId":"R_SO_4_474567208","rtUrl":null,"ftype":0,"rtUrls":[],"copyright":0,"mvid":5497055,"bMusic":{"name":null,"id":1305179412,"size":2672371,"extension":"mp3","sr":44100,"dfsId":18634523069425582,"bitrate":96000,"playTime":222630,"volumeDelta":-2.66,"dfsId_str":"18634523069425582"},"mp3Url":"http://m2.music.126.net/LjjEFWQDlqSGe1gXX4Dfdg==/18634523069425582.mp3","hMusic":{"name":null,"id":1305179410,"size":8907799,"extension":"mp3","sr":44100,"dfsId":19067730648987224,"bitrate":320000,"playTime":222630,"volumeDelta":-2.99,"dfsId_str":"19067730648987224"},"mMusic":{"name":null,"id":1305179411,"size":4453922,"extension":"mp3","sr":44100,"dfsId":18919296579238715,"bitrate":160000,"playTime":222630,"volumeDelta":-2.57,"dfsId_str":"18919296579238715"},"lMusic":{"name":null,"id":1305179412,"size":2672371,"extension":"mp3","sr":44100,"dfsId":18634523069425582,"bitrate":96000,"playTime":222630,"volumeDelta":-2.66,"dfsId_str":"18634523069425582"},"rurl":null,"rtype":0,"transNames":["Leather Jacket"],"privilege":{"id":474567208,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":999000,"fl":128000,"toast":false,"flag":0},"exclusive":false},"alg":"hot_server"},{"id":473817900,"type":4,"name":"Promise","copywriter":null,"picUrl":null,"canDislike":true,"song":{"name":"Promise","id":473817900,"position":1,"alias":[],"status":0,"fee":0,"copyrightId":0,"disc":"","no":0,"artists":[{"name":"黄子韬","id":1025202,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"album":{"name":"Promise","id":35424183,"type":"EP/Single","size":1,"picId":19133701346646512,"blurPicUrl":"http://p1.music.126.net/W4MHAGscFtizbTlnOUnboA==/19133701346646512.jpg","companyId":0,"pic":19133701346646512,"picUrl":"http://p1.music.126.net/W4MHAGscFtizbTlnOUnboA==/19133701346646512.jpg","publishTime":1492963200007,"description":"","tags":"","company":"黄子韬工作室","briefDesc":"","artist":{"name":"","id":0,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0},"songs":[],"alias":[],"status":0,"copyrightId":0,"commentThreadId":"R_AL_3_35424183","artists":[{"name":"黄子韬","id":1025202,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"picId_str":"19133701346646512"},"starred":false,"popularity":50,"score":50,"starredNum":0,"duration":240613,"playedNum":0,"dayPlays":0,"hearTime":0,"ringtone":null,"crbt":null,"audition":null,"copyFrom":"","commentThreadId":"R_SO_4_473817900","rtUrl":null,"ftype":0,"rtUrls":[],"copyright":2,"mvid":0,"bMusic":{"name":null,"id":1304626568,"size":2888038,"extension":"mp3","sr":44100,"dfsId":18731280092679088,"bitrate":96000,"playTime":240613,"volumeDelta":-1.71,"dfsId_str":"18731280092679088"},"mp3Url":"http://m2.music.126.net/T-zIrluykz3ICEeJcz7GWA==/18731280092679088.mp3","hMusic":{"name":null,"id":1304626566,"size":9626689,"extension":"mp3","sr":44100,"dfsId":18498183627588909,"bitrate":320000,"playTime":240613,"volumeDelta":-1.99,"dfsId_str":"18498183627588909"},"mMusic":{"name":null,"id":1304626567,"size":4813367,"extension":"mp3","sr":44100,"dfsId":18597139674085252,"bitrate":160000,"playTime":240613,"volumeDelta":-1.63,"dfsId_str":"18597139674085252"},"lMusic":{"name":null,"id":1304626568,"size":2888038,"extension":"mp3","sr":44100,"dfsId":18731280092679088,"bitrate":96000,"playTime":240613,"volumeDelta":-1.71,"dfsId_str":"18731280092679088"},"rurl":null,"rtype":0,"exclusive":false,"privilege":{"id":473817900,"fee":0,"payed":0,"st":0,"pl":320000,"dl":320000,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":999000,"fl":320000,"toast":false,"flag":0}},"alg":"hot_server"},{"id":473940122,"type":4,"name":"不冷不热 ","copywriter":null,"picUrl":null,"canDislike":true,"song":{"name":"不冷不热 ","id":473940122,"position":1,"alias":[],"status":0,"fee":0,"copyrightId":0,"disc":"","no":0,"artists":[{"name":"Panta.Q","id":1050465,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"album":{"name":"不冷不热","id":35424155,"type":"EP/Single","size":1,"picId":19140298416417160,"blurPicUrl":"http://p1.music.126.net/KJWobykP41_vLUSLe3SL1g==/19140298416417160.jpg","companyId":0,"pic":19140298416417160,"picUrl":"http://p1.music.126.net/KJWobykP41_vLUSLe3SL1g==/19140298416417160.jpg","publishTime":1492963200007,"description":"","tags":"","company":"","briefDesc":"","artist":{"name":"","id":0,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0},"songs":[],"alias":[],"status":0,"copyrightId":0,"commentThreadId":"R_AL_3_35424155","artists":[{"name":"Panta.Q","id":1050465,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"picId_str":"19140298416417160"},"starred":false,"popularity":0,"score":0,"starredNum":0,"duration":234125,"playedNum":0,"dayPlays":0,"hearTime":0,"ringtone":null,"crbt":null,"audition":null,"copyFrom":"","commentThreadId":"R_SO_4_473940122","rtUrl":null,"ftype":0,"rtUrls":[],"copyright":2,"mvid":0,"bMusic":{"name":null,"id":1305028000,"size":2810298,"extension":"mp3","sr":44100,"dfsId":18981968742022818,"bitrate":96000,"playTime":234125,"volumeDelta":-0.53,"dfsId_str":"18981968742022818"},"mp3Url":"http://m2.music.126.net/e8Jl_zwEek1WfJp0wJTwuA==/18981968742022818.mp3","hMusic":{"name":null,"id":1305027998,"size":9367554,"extension":"mp3","sr":44100,"dfsId":19123805742009301,"bitrate":320000,"playTime":234125,"volumeDelta":-0.83,"dfsId_str":"19123805742009301"},"mMusic":{"name":null,"id":1305027999,"size":4683800,"extension":"mp3","sr":44100,"dfsId":19029247742014422,"bitrate":160000,"playTime":234125,"volumeDelta":-0.43,"dfsId_str":"19029247742014422"},"lMusic":{"name":null,"id":1305028000,"size":2810298,"extension":"mp3","sr":44100,"dfsId":18981968742022818,"bitrate":96000,"playTime":234125,"volumeDelta":-0.53,"dfsId_str":"18981968742022818"},"rurl":null,"rtype":0,"exclusive":true,"privilege":{"id":473940122,"fee":0,"payed":0,"st":0,"pl":320000,"dl":320000,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":999000,"fl":320000,"toast":false,"flag":2}},"alg":"hot_server"},{"id":473964532,"type":4,"name":"???","copywriter":null,"picUrl":null,"canDislike":true,"song":{"name":"???","id":473964532,"position":5,"alias":[],"status":0,"fee":0,"copyrightId":0,"disc":"","no":5,"artists":[{"name":"Double K","id":123420,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0},{"name":"Kriz","id":12388126,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"album":{"name":"?????","id":35425215,"type":"专辑","size":11,"picId":19043541393173125,"blurPicUrl":"http://p1.music.126.net/IbrLZlt5sXVHxazvNVuiZA==/19043541393173125.jpg","companyId":0,"pic":19043541393173125,"picUrl":"http://p1.music.126.net/IbrLZlt5sXVHxazvNVuiZA==/19043541393173125.jpg","publishTime":1492876800007,"description":"","tags":"","company":"(?)????????","briefDesc":"","artist":{"name":"","id":0,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0},"songs":[],"alias":[],"status":0,"copyrightId":0,"commentThreadId":"R_AL_3_35425215","artists":[{"name":"Double K","id":123420,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"picId_str":"19043541393173125","transNames":["Green Wave"]},"starred":false,"popularity":0,"score":0,"starredNum":0,"duration":210782,"playedNum":0,"dayPlays":0,"hearTime":0,"ringtone":null,"crbt":null,"audition":null,"copyFrom":"","commentThreadId":"R_SO_4_473964532","rtUrl":null,"ftype":0,"rtUrls":[],"copyright":0,"mvid":5495080,"bMusic":{"name":null,"id":1305179370,"size":2529743,"extension":"mp3","sr":44100,"dfsId":19067730648987220,"bitrate":96000,"playTime":210782,"volumeDelta":-0.35,"dfsId_str":"19067730648987220"},"mp3Url":"http://m2.music.126.net/f4IyKlnEUdQA6H-_pA5BiA==/19067730648987220.mp3","hMusic":{"name":null,"id":1305179368,"size":8432370,"extension":"mp3","sr":44100,"dfsId":18771962022907568,"bitrate":320000,"playTime":210782,"volumeDelta":-0.73,"dfsId_str":"18771962022907568"},"mMusic":{"name":null,"id":1305179369,"size":4216208,"extension":"mp3","sr":44100,"dfsId":18707090836857091,"bitrate":160000,"playTime":210782,"volumeDelta":-0.28,"dfsId_str":"18707090836857091"},"lMusic":{"name":null,"id":1305179370,"size":2529743,"extension":"mp3","sr":44100,"dfsId":19067730648987220,"bitrate":96000,"playTime":210782,"volumeDelta":-0.35,"dfsId_str":"19067730648987220"},"rurl":null,"rtype":0,"transNames":["Used To"],"privilege":{"id":473964532,"fee":0,"payed":0,"st":0,"pl":320000,"dl":320000,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":320000,"fl":320000,"toast":false,"flag":0},"exclusive":false},"alg":"hot_server"},{"id":473940410,"type":4,"name":"Sunny Day","copywriter":null,"picUrl":null,"canDislike":true,"song":{"name":"Sunny Day","id":473940410,"position":1,"alias":["电视剧《繁星四月》插曲"],"status":0,"fee":8,"copyrightId":419013,"disc":"","no":0,"artists":[{"name":"刘维","id":229341,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"album":{"name":"Sunny Day","id":35424198,"type":"EP/Single","size":1,"picId":19113910137355540,"blurPicUrl":"http://p1.music.126.net/5B-C0UnAomF5lKiCER2xuA==/19113910137355540.jpg","companyId":0,"pic":19113910137355540,"picUrl":"http://p1.music.126.net/5B-C0UnAomF5lKiCER2xuA==/19113910137355540.jpg","publishTime":1492963200007,"description":"","tags":"","company":"大象音乐","briefDesc":"","artist":{"name":"","id":0,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0},"songs":[],"alias":["电视剧《繁星四月》插曲"],"status":1,"copyrightId":419013,"commentThreadId":"R_AL_3_35424198","artists":[{"name":"刘维","id":229341,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"picId_str":"19113910137355540"},"starred":false,"popularity":0,"score":0,"starredNum":0,"duration":207428,"playedNum":0,"dayPlays":0,"hearTime":0,"ringtone":null,"crbt":null,"audition":null,"copyFrom":"","commentThreadId":"R_SO_4_473940410","rtUrl":null,"ftype":0,"rtUrls":[],"copyright":2,"mvid":0,"bMusic":{"name":null,"id":1304594877,"size":2489932,"extension":"mp3","sr":44100,"dfsId":19221662276872642,"bitrate":96000,"playTime":207428,"volumeDelta":-3.76,"dfsId_str":"19221662276872642"},"mp3Url":"http://m2.music.126.net/6uDxpoyxmervW8bLUXwFCg==/19221662276872642.mp3","hMusic":{"name":null,"id":1304594875,"size":8299668,"extension":"mp3","sr":44100,"dfsId":19197473021061565,"bitrate":320000,"playTime":207428,"volumeDelta":-4.06,"dfsId_str":"19197473021061565"},"mMusic":{"name":null,"id":1304594876,"size":4149857,"extension":"mp3","sr":44100,"dfsId":19054536509450989,"bitrate":160000,"playTime":207428,"volumeDelta":-3.66,"dfsId_str":"19054536509450989"},"lMusic":{"name":null,"id":1304594877,"size":2489932,"extension":"mp3","sr":44100,"dfsId":19221662276872642,"bitrate":96000,"playTime":207428,"volumeDelta":-3.76,"dfsId_str":"19221662276872642"},"rurl":null,"rtype":0,"exclusive":true,"privilege":{"id":473940410,"fee":8,"payed":0,"st":0,"pl":128000,"dl":0,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":999000,"fl":128000,"toast":false,"flag":0}},"alg":"hot_server"}]
-     */
-
     private int code;
     private int category;
     private List<ResultBean> result;
@@ -40,5 +34,1601 @@ public class RecommendMusicBean {
 
     public void setResult(List<ResultBean> result) {
         this.result = result;
+    }
+
+    public static class ResultBean {
+
+        private int id;
+        private int type;
+        private String name;
+        private Object copywriter;
+        private Object picUrl;
+        private boolean canDislike;
+        private SongBean song;
+        private String alg;
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public int getType() {
+            return type;
+        }
+
+        public void setType(int type) {
+            this.type = type;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public Object getCopywriter() {
+            return copywriter;
+        }
+
+        public void setCopywriter(Object copywriter) {
+            this.copywriter = copywriter;
+        }
+
+        public Object getPicUrl() {
+            return picUrl;
+        }
+
+        public void setPicUrl(Object picUrl) {
+            this.picUrl = picUrl;
+        }
+
+        public boolean isCanDislike() {
+            return canDislike;
+        }
+
+        public void setCanDislike(boolean canDislike) {
+            this.canDislike = canDislike;
+        }
+
+        public SongBean getSong() {
+            return song;
+        }
+
+        public void setSong(SongBean song) {
+            this.song = song;
+        }
+
+        public String getAlg() {
+            return alg;
+        }
+
+        public void setAlg(String alg) {
+            this.alg = alg;
+        }
+
+        public static class SongBean {
+            /**
+             * name : Promise
+             * id : 473817900
+             * position : 1
+             * alias : []
+             * status : 0
+             * fee : 0
+             * copyrightId : 0
+             * disc :
+             * no : 0
+             * artists : [{"name":"黄子韬","id":1025202,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}]
+             * album : {"name":"Promise","id":35424183,"type":"EP/Single","size":1,"picId":19133701346646512,"blurPicUrl":"http://p4.music.126.net/W4MHAGscFtizbTlnOUnboA==/19133701346646512.jpg","companyId":0,"pic":19133701346646512,"picUrl":"http://p4.music.126.net/W4MHAGscFtizbTlnOUnboA==/19133701346646512.jpg","publishTime":1492963200007,"description":"","tags":"","company":"黄子韬工作室","briefDesc":"","artist":{"name":"","id":0,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0},"songs":[],"alias":[],"status":0,"copyrightId":0,"commentThreadId":"R_AL_3_35424183","artists":[{"name":"黄子韬","id":1025202,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}],"picId_str":"19133701346646512"}
+             * starred : false
+             * popularity : 75
+             * score : 75
+             * starredNum : 0
+             * duration : 240613
+             * playedNum : 0
+             * dayPlays : 0
+             * hearTime : 0
+             * ringtone : null
+             * crbt : null
+             * audition : null
+             * copyFrom :
+             * commentThreadId : R_SO_4_473817900
+             * rtUrl : null
+             * ftype : 0
+             * rtUrls : []
+             * copyright : 2
+             * mvid : 0
+             * bMusic : {"name":null,"id":1304626568,"size":2888038,"extension":"mp3","sr":44100,"dfsId":18731280092679088,"bitrate":96000,"playTime":240613,"volumeDelta":-1.71,"dfsId_str":"18731280092679088"}
+             * mp3Url : http://m2.music.126.net/T-zIrluykz3ICEeJcz7GWA==/18731280092679088.mp3
+             * hMusic : {"name":null,"id":1304626566,"size":9626689,"extension":"mp3","sr":44100,"dfsId":18498183627588909,"bitrate":320000,"playTime":240613,"volumeDelta":-1.99,"dfsId_str":"18498183627588909"}
+             * mMusic : {"name":null,"id":1304626567,"size":4813367,"extension":"mp3","sr":44100,"dfsId":18597139674085252,"bitrate":160000,"playTime":240613,"volumeDelta":-1.63,"dfsId_str":"18597139674085252"}
+             * lMusic : {"name":null,"id":1304626568,"size":2888038,"extension":"mp3","sr":44100,"dfsId":18731280092679088,"bitrate":96000,"playTime":240613,"volumeDelta":-1.71,"dfsId_str":"18731280092679088"}
+             * rurl : null
+             * rtype : 0
+             * privilege : {"id":473817900,"fee":0,"payed":0,"st":0,"pl":320000,"dl":320000,"sp":7,"cp":1,"subp":1,"cs":false,"maxbr":999000,"fl":320000,"toast":false,"flag":0}
+             */
+
+            private String name;
+            private int id;
+            private int position;
+            private int status;
+            private int fee;
+            private int copyrightId;
+            private String disc;
+            private int no;
+            private AlbumBean album;
+            private boolean starred;
+            private int popularity;
+            private int score;
+            private int starredNum;
+            private int duration;
+            private int playedNum;
+            private int dayPlays;
+            private int hearTime;
+            private Object ringtone;
+            private Object crbt;
+            private Object audition;
+            private String copyFrom;
+            private String commentThreadId;
+            private Object rtUrl;
+            private int ftype;
+            private int copyright;
+            private int mvid;
+            private BMusicBean bMusic;
+            private String mp3Url;
+            private HMusicBean hMusic;
+            private MMusicBean mMusic;
+            private LMusicBean lMusic;
+            private Object rurl;
+            private int rtype;
+            private PrivilegeBean privilege;
+            private List<?> alias;
+            private List<ArtistsBeanX> artists;
+            private List<?> rtUrls;
+
+            public String getName() {
+                return name;
+            }
+
+            public void setName(String name) {
+                this.name = name;
+            }
+
+            public int getId() {
+                return id;
+            }
+
+            public void setId(int id) {
+                this.id = id;
+            }
+
+            public int getPosition() {
+                return position;
+            }
+
+            public void setPosition(int position) {
+                this.position = position;
+            }
+
+            public int getStatus() {
+                return status;
+            }
+
+            public void setStatus(int status) {
+                this.status = status;
+            }
+
+            public int getFee() {
+                return fee;
+            }
+
+            public void setFee(int fee) {
+                this.fee = fee;
+            }
+
+            public int getCopyrightId() {
+                return copyrightId;
+            }
+
+            public void setCopyrightId(int copyrightId) {
+                this.copyrightId = copyrightId;
+            }
+
+            public String getDisc() {
+                return disc;
+            }
+
+            public void setDisc(String disc) {
+                this.disc = disc;
+            }
+
+            public int getNo() {
+                return no;
+            }
+
+            public void setNo(int no) {
+                this.no = no;
+            }
+
+            public AlbumBean getAlbum() {
+                return album;
+            }
+
+            public void setAlbum(AlbumBean album) {
+                this.album = album;
+            }
+
+            public boolean isStarred() {
+                return starred;
+            }
+
+            public void setStarred(boolean starred) {
+                this.starred = starred;
+            }
+
+            public int getPopularity() {
+                return popularity;
+            }
+
+            public void setPopularity(int popularity) {
+                this.popularity = popularity;
+            }
+
+            public int getScore() {
+                return score;
+            }
+
+            public void setScore(int score) {
+                this.score = score;
+            }
+
+            public int getStarredNum() {
+                return starredNum;
+            }
+
+            public void setStarredNum(int starredNum) {
+                this.starredNum = starredNum;
+            }
+
+            public int getDuration() {
+                return duration;
+            }
+
+            public void setDuration(int duration) {
+                this.duration = duration;
+            }
+
+            public int getPlayedNum() {
+                return playedNum;
+            }
+
+            public void setPlayedNum(int playedNum) {
+                this.playedNum = playedNum;
+            }
+
+            public int getDayPlays() {
+                return dayPlays;
+            }
+
+            public void setDayPlays(int dayPlays) {
+                this.dayPlays = dayPlays;
+            }
+
+            public int getHearTime() {
+                return hearTime;
+            }
+
+            public void setHearTime(int hearTime) {
+                this.hearTime = hearTime;
+            }
+
+            public Object getRingtone() {
+                return ringtone;
+            }
+
+            public void setRingtone(Object ringtone) {
+                this.ringtone = ringtone;
+            }
+
+            public Object getCrbt() {
+                return crbt;
+            }
+
+            public void setCrbt(Object crbt) {
+                this.crbt = crbt;
+            }
+
+            public Object getAudition() {
+                return audition;
+            }
+
+            public void setAudition(Object audition) {
+                this.audition = audition;
+            }
+
+            public String getCopyFrom() {
+                return copyFrom;
+            }
+
+            public void setCopyFrom(String copyFrom) {
+                this.copyFrom = copyFrom;
+            }
+
+            public String getCommentThreadId() {
+                return commentThreadId;
+            }
+
+            public void setCommentThreadId(String commentThreadId) {
+                this.commentThreadId = commentThreadId;
+            }
+
+            public Object getRtUrl() {
+                return rtUrl;
+            }
+
+            public void setRtUrl(Object rtUrl) {
+                this.rtUrl = rtUrl;
+            }
+
+            public int getFtype() {
+                return ftype;
+            }
+
+            public void setFtype(int ftype) {
+                this.ftype = ftype;
+            }
+
+            public int getCopyright() {
+                return copyright;
+            }
+
+            public void setCopyright(int copyright) {
+                this.copyright = copyright;
+            }
+
+            public int getMvid() {
+                return mvid;
+            }
+
+            public void setMvid(int mvid) {
+                this.mvid = mvid;
+            }
+
+            public BMusicBean getBMusic() {
+                return bMusic;
+            }
+
+            public void setBMusic(BMusicBean bMusic) {
+                this.bMusic = bMusic;
+            }
+
+            public String getMp3Url() {
+                return mp3Url;
+            }
+
+            public void setMp3Url(String mp3Url) {
+                this.mp3Url = mp3Url;
+            }
+
+            public HMusicBean getHMusic() {
+                return hMusic;
+            }
+
+            public void setHMusic(HMusicBean hMusic) {
+                this.hMusic = hMusic;
+            }
+
+            public MMusicBean getMMusic() {
+                return mMusic;
+            }
+
+            public void setMMusic(MMusicBean mMusic) {
+                this.mMusic = mMusic;
+            }
+
+            public LMusicBean getLMusic() {
+                return lMusic;
+            }
+
+            public void setLMusic(LMusicBean lMusic) {
+                this.lMusic = lMusic;
+            }
+
+            public Object getRurl() {
+                return rurl;
+            }
+
+            public void setRurl(Object rurl) {
+                this.rurl = rurl;
+            }
+
+            public int getRtype() {
+                return rtype;
+            }
+
+            public void setRtype(int rtype) {
+                this.rtype = rtype;
+            }
+
+            public PrivilegeBean getPrivilege() {
+                return privilege;
+            }
+
+            public void setPrivilege(PrivilegeBean privilege) {
+                this.privilege = privilege;
+            }
+
+            public List<?> getAlias() {
+                return alias;
+            }
+
+            public void setAlias(List<?> alias) {
+                this.alias = alias;
+            }
+
+            public List<ArtistsBeanX> getArtists() {
+                return artists;
+            }
+
+            public void setArtists(List<ArtistsBeanX> artists) {
+                this.artists = artists;
+            }
+
+            public List<?> getRtUrls() {
+                return rtUrls;
+            }
+
+            public void setRtUrls(List<?> rtUrls) {
+                this.rtUrls = rtUrls;
+            }
+
+            public static class AlbumBean {
+                /**
+                 * name : Promise
+                 * id : 35424183
+                 * type : EP/Single
+                 * size : 1
+                 * picId : 19133701346646512
+                 * blurPicUrl : http://p4.music.126.net/W4MHAGscFtizbTlnOUnboA==/19133701346646512.jpg
+                 * companyId : 0
+                 * pic : 19133701346646512
+                 * picUrl : http://p4.music.126.net/W4MHAGscFtizbTlnOUnboA==/19133701346646512.jpg
+                 * publishTime : 1492963200007
+                 * description :
+                 * tags :
+                 * company : 黄子韬工作室
+                 * briefDesc :
+                 * artist : {"name":"","id":0,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}
+                 * songs : []
+                 * alias : []
+                 * status : 0
+                 * copyrightId : 0
+                 * commentThreadId : R_AL_3_35424183
+                 * artists : [{"name":"黄子韬","id":1025202,"picId":0,"img1v1Id":0,"briefDesc":"","picUrl":"http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","img1v1Url":"http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg","albumSize":0,"alias":[],"trans":"","musicSize":0}]
+                 * picId_str : 19133701346646512
+                 */
+
+                private String name;
+                private int id;
+                private String type;
+                private int size;
+                private long picId;
+                private String blurPicUrl;
+                private int companyId;
+                private long pic;
+                private String picUrl;
+                private long publishTime;
+                private String description;
+                private String tags;
+                private String company;
+                private String briefDesc;
+                private ArtistBean artist;
+                private int status;
+                private int copyrightId;
+                private String commentThreadId;
+                private String picId_str;
+                private List<?> songs;
+                private List<?> alias;
+                private List<ArtistsBean> artists;
+
+                public String getName() {
+                    return name;
+                }
+
+                public void setName(String name) {
+                    this.name = name;
+                }
+
+                public int getId() {
+                    return id;
+                }
+
+                public void setId(int id) {
+                    this.id = id;
+                }
+
+                public String getType() {
+                    return type;
+                }
+
+                public void setType(String type) {
+                    this.type = type;
+                }
+
+                public int getSize() {
+                    return size;
+                }
+
+                public void setSize(int size) {
+                    this.size = size;
+                }
+
+                public long getPicId() {
+                    return picId;
+                }
+
+                public void setPicId(long picId) {
+                    this.picId = picId;
+                }
+
+                public String getBlurPicUrl() {
+                    return blurPicUrl;
+                }
+
+                public void setBlurPicUrl(String blurPicUrl) {
+                    this.blurPicUrl = blurPicUrl;
+                }
+
+                public int getCompanyId() {
+                    return companyId;
+                }
+
+                public void setCompanyId(int companyId) {
+                    this.companyId = companyId;
+                }
+
+                public long getPic() {
+                    return pic;
+                }
+
+                public void setPic(long pic) {
+                    this.pic = pic;
+                }
+
+                public String getPicUrl() {
+                    return picUrl;
+                }
+
+                public void setPicUrl(String picUrl) {
+                    this.picUrl = picUrl;
+                }
+
+                public long getPublishTime() {
+                    return publishTime;
+                }
+
+                public void setPublishTime(long publishTime) {
+                    this.publishTime = publishTime;
+                }
+
+                public String getDescription() {
+                    return description;
+                }
+
+                public void setDescription(String description) {
+                    this.description = description;
+                }
+
+                public String getTags() {
+                    return tags;
+                }
+
+                public void setTags(String tags) {
+                    this.tags = tags;
+                }
+
+                public String getCompany() {
+                    return company;
+                }
+
+                public void setCompany(String company) {
+                    this.company = company;
+                }
+
+                public String getBriefDesc() {
+                    return briefDesc;
+                }
+
+                public void setBriefDesc(String briefDesc) {
+                    this.briefDesc = briefDesc;
+                }
+
+                public ArtistBean getArtist() {
+                    return artist;
+                }
+
+                public void setArtist(ArtistBean artist) {
+                    this.artist = artist;
+                }
+
+                public int getStatus() {
+                    return status;
+                }
+
+                public void setStatus(int status) {
+                    this.status = status;
+                }
+
+                public int getCopyrightId() {
+                    return copyrightId;
+                }
+
+                public void setCopyrightId(int copyrightId) {
+                    this.copyrightId = copyrightId;
+                }
+
+                public String getCommentThreadId() {
+                    return commentThreadId;
+                }
+
+                public void setCommentThreadId(String commentThreadId) {
+                    this.commentThreadId = commentThreadId;
+                }
+
+                public String getPicId_str() {
+                    return picId_str;
+                }
+
+                public void setPicId_str(String picId_str) {
+                    this.picId_str = picId_str;
+                }
+
+                public List<?> getSongs() {
+                    return songs;
+                }
+
+                public void setSongs(List<?> songs) {
+                    this.songs = songs;
+                }
+
+                public List<?> getAlias() {
+                    return alias;
+                }
+
+                public void setAlias(List<?> alias) {
+                    this.alias = alias;
+                }
+
+                public List<ArtistsBean> getArtists() {
+                    return artists;
+                }
+
+                public void setArtists(List<ArtistsBean> artists) {
+                    this.artists = artists;
+                }
+
+                public static class ArtistBean {
+                    /**
+                     * name :
+                     * id : 0
+                     * picId : 0
+                     * img1v1Id : 0
+                     * briefDesc :
+                     * picUrl : http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg
+                     * img1v1Url : http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg
+                     * albumSize : 0
+                     * alias : []
+                     * trans :
+                     * musicSize : 0
+                     */
+
+                    private String name;
+                    private int id;
+                    private int picId;
+                    private int img1v1Id;
+                    private String briefDesc;
+                    private String picUrl;
+                    private String img1v1Url;
+                    private int albumSize;
+                    private String trans;
+                    private int musicSize;
+                    private List<?> alias;
+
+                    public String getName() {
+                        return name;
+                    }
+
+                    public void setName(String name) {
+                        this.name = name;
+                    }
+
+                    public int getId() {
+                        return id;
+                    }
+
+                    public void setId(int id) {
+                        this.id = id;
+                    }
+
+                    public int getPicId() {
+                        return picId;
+                    }
+
+                    public void setPicId(int picId) {
+                        this.picId = picId;
+                    }
+
+                    public int getImg1v1Id() {
+                        return img1v1Id;
+                    }
+
+                    public void setImg1v1Id(int img1v1Id) {
+                        this.img1v1Id = img1v1Id;
+                    }
+
+                    public String getBriefDesc() {
+                        return briefDesc;
+                    }
+
+                    public void setBriefDesc(String briefDesc) {
+                        this.briefDesc = briefDesc;
+                    }
+
+                    public String getPicUrl() {
+                        return picUrl;
+                    }
+
+                    public void setPicUrl(String picUrl) {
+                        this.picUrl = picUrl;
+                    }
+
+                    public String getImg1v1Url() {
+                        return img1v1Url;
+                    }
+
+                    public void setImg1v1Url(String img1v1Url) {
+                        this.img1v1Url = img1v1Url;
+                    }
+
+                    public int getAlbumSize() {
+                        return albumSize;
+                    }
+
+                    public void setAlbumSize(int albumSize) {
+                        this.albumSize = albumSize;
+                    }
+
+                    public String getTrans() {
+                        return trans;
+                    }
+
+                    public void setTrans(String trans) {
+                        this.trans = trans;
+                    }
+
+                    public int getMusicSize() {
+                        return musicSize;
+                    }
+
+                    public void setMusicSize(int musicSize) {
+                        this.musicSize = musicSize;
+                    }
+
+                    public List<?> getAlias() {
+                        return alias;
+                    }
+
+                    public void setAlias(List<?> alias) {
+                        this.alias = alias;
+                    }
+                }
+
+                public static class ArtistsBean {
+                    /**
+                     * name : 黄子韬
+                     * id : 1025202
+                     * picId : 0
+                     * img1v1Id : 0
+                     * briefDesc :
+                     * picUrl : http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg
+                     * img1v1Url : http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg
+                     * albumSize : 0
+                     * alias : []
+                     * trans :
+                     * musicSize : 0
+                     */
+
+                    private String name;
+                    private int id;
+                    private int picId;
+                    private int img1v1Id;
+                    private String briefDesc;
+                    private String picUrl;
+                    private String img1v1Url;
+                    private int albumSize;
+                    private String trans;
+                    private int musicSize;
+                    private List<?> alias;
+
+                    public String getName() {
+                        return name;
+                    }
+
+                    public void setName(String name) {
+                        this.name = name;
+                    }
+
+                    public int getId() {
+                        return id;
+                    }
+
+                    public void setId(int id) {
+                        this.id = id;
+                    }
+
+                    public int getPicId() {
+                        return picId;
+                    }
+
+                    public void setPicId(int picId) {
+                        this.picId = picId;
+                    }
+
+                    public int getImg1v1Id() {
+                        return img1v1Id;
+                    }
+
+                    public void setImg1v1Id(int img1v1Id) {
+                        this.img1v1Id = img1v1Id;
+                    }
+
+                    public String getBriefDesc() {
+                        return briefDesc;
+                    }
+
+                    public void setBriefDesc(String briefDesc) {
+                        this.briefDesc = briefDesc;
+                    }
+
+                    public String getPicUrl() {
+                        return picUrl;
+                    }
+
+                    public void setPicUrl(String picUrl) {
+                        this.picUrl = picUrl;
+                    }
+
+                    public String getImg1v1Url() {
+                        return img1v1Url;
+                    }
+
+                    public void setImg1v1Url(String img1v1Url) {
+                        this.img1v1Url = img1v1Url;
+                    }
+
+                    public int getAlbumSize() {
+                        return albumSize;
+                    }
+
+                    public void setAlbumSize(int albumSize) {
+                        this.albumSize = albumSize;
+                    }
+
+                    public String getTrans() {
+                        return trans;
+                    }
+
+                    public void setTrans(String trans) {
+                        this.trans = trans;
+                    }
+
+                    public int getMusicSize() {
+                        return musicSize;
+                    }
+
+                    public void setMusicSize(int musicSize) {
+                        this.musicSize = musicSize;
+                    }
+
+                    public List<?> getAlias() {
+                        return alias;
+                    }
+
+                    public void setAlias(List<?> alias) {
+                        this.alias = alias;
+                    }
+                }
+            }
+
+            public static class BMusicBean {
+                /**
+                 * name : null
+                 * id : 1304626568
+                 * size : 2888038
+                 * extension : mp3
+                 * sr : 44100
+                 * dfsId : 18731280092679088
+                 * bitrate : 96000
+                 * playTime : 240613
+                 * volumeDelta : -1.71
+                 * dfsId_str : 18731280092679088
+                 */
+
+                private Object name;
+                private int id;
+                private int size;
+                private String extension;
+                private int sr;
+                private long dfsId;
+                private int bitrate;
+                private int playTime;
+                private double volumeDelta;
+                private String dfsId_str;
+
+                public Object getName() {
+                    return name;
+                }
+
+                public void setName(Object name) {
+                    this.name = name;
+                }
+
+                public int getId() {
+                    return id;
+                }
+
+                public void setId(int id) {
+                    this.id = id;
+                }
+
+                public int getSize() {
+                    return size;
+                }
+
+                public void setSize(int size) {
+                    this.size = size;
+                }
+
+                public String getExtension() {
+                    return extension;
+                }
+
+                public void setExtension(String extension) {
+                    this.extension = extension;
+                }
+
+                public int getSr() {
+                    return sr;
+                }
+
+                public void setSr(int sr) {
+                    this.sr = sr;
+                }
+
+                public long getDfsId() {
+                    return dfsId;
+                }
+
+                public void setDfsId(long dfsId) {
+                    this.dfsId = dfsId;
+                }
+
+                public int getBitrate() {
+                    return bitrate;
+                }
+
+                public void setBitrate(int bitrate) {
+                    this.bitrate = bitrate;
+                }
+
+                public int getPlayTime() {
+                    return playTime;
+                }
+
+                public void setPlayTime(int playTime) {
+                    this.playTime = playTime;
+                }
+
+                public double getVolumeDelta() {
+                    return volumeDelta;
+                }
+
+                public void setVolumeDelta(double volumeDelta) {
+                    this.volumeDelta = volumeDelta;
+                }
+
+                public String getDfsId_str() {
+                    return dfsId_str;
+                }
+
+                public void setDfsId_str(String dfsId_str) {
+                    this.dfsId_str = dfsId_str;
+                }
+            }
+
+            public static class HMusicBean {
+                /**
+                 * name : null
+                 * id : 1304626566
+                 * size : 9626689
+                 * extension : mp3
+                 * sr : 44100
+                 * dfsId : 18498183627588909
+                 * bitrate : 320000
+                 * playTime : 240613
+                 * volumeDelta : -1.99
+                 * dfsId_str : 18498183627588909
+                 */
+
+                private Object name;
+                private int id;
+                private int size;
+                private String extension;
+                private int sr;
+                private long dfsId;
+                private int bitrate;
+                private int playTime;
+                private double volumeDelta;
+                private String dfsId_str;
+
+                public Object getName() {
+                    return name;
+                }
+
+                public void setName(Object name) {
+                    this.name = name;
+                }
+
+                public int getId() {
+                    return id;
+                }
+
+                public void setId(int id) {
+                    this.id = id;
+                }
+
+                public int getSize() {
+                    return size;
+                }
+
+                public void setSize(int size) {
+                    this.size = size;
+                }
+
+                public String getExtension() {
+                    return extension;
+                }
+
+                public void setExtension(String extension) {
+                    this.extension = extension;
+                }
+
+                public int getSr() {
+                    return sr;
+                }
+
+                public void setSr(int sr) {
+                    this.sr = sr;
+                }
+
+                public long getDfsId() {
+                    return dfsId;
+                }
+
+                public void setDfsId(long dfsId) {
+                    this.dfsId = dfsId;
+                }
+
+                public int getBitrate() {
+                    return bitrate;
+                }
+
+                public void setBitrate(int bitrate) {
+                    this.bitrate = bitrate;
+                }
+
+                public int getPlayTime() {
+                    return playTime;
+                }
+
+                public void setPlayTime(int playTime) {
+                    this.playTime = playTime;
+                }
+
+                public double getVolumeDelta() {
+                    return volumeDelta;
+                }
+
+                public void setVolumeDelta(double volumeDelta) {
+                    this.volumeDelta = volumeDelta;
+                }
+
+                public String getDfsId_str() {
+                    return dfsId_str;
+                }
+
+                public void setDfsId_str(String dfsId_str) {
+                    this.dfsId_str = dfsId_str;
+                }
+            }
+
+            public static class MMusicBean {
+                /**
+                 * name : null
+                 * id : 1304626567
+                 * size : 4813367
+                 * extension : mp3
+                 * sr : 44100
+                 * dfsId : 18597139674085252
+                 * bitrate : 160000
+                 * playTime : 240613
+                 * volumeDelta : -1.63
+                 * dfsId_str : 18597139674085252
+                 */
+
+                private Object name;
+                private int id;
+                private int size;
+                private String extension;
+                private int sr;
+                private long dfsId;
+                private int bitrate;
+                private int playTime;
+                private double volumeDelta;
+                private String dfsId_str;
+
+                public Object getName() {
+                    return name;
+                }
+
+                public void setName(Object name) {
+                    this.name = name;
+                }
+
+                public int getId() {
+                    return id;
+                }
+
+                public void setId(int id) {
+                    this.id = id;
+                }
+
+                public int getSize() {
+                    return size;
+                }
+
+                public void setSize(int size) {
+                    this.size = size;
+                }
+
+                public String getExtension() {
+                    return extension;
+                }
+
+                public void setExtension(String extension) {
+                    this.extension = extension;
+                }
+
+                public int getSr() {
+                    return sr;
+                }
+
+                public void setSr(int sr) {
+                    this.sr = sr;
+                }
+
+                public long getDfsId() {
+                    return dfsId;
+                }
+
+                public void setDfsId(long dfsId) {
+                    this.dfsId = dfsId;
+                }
+
+                public int getBitrate() {
+                    return bitrate;
+                }
+
+                public void setBitrate(int bitrate) {
+                    this.bitrate = bitrate;
+                }
+
+                public int getPlayTime() {
+                    return playTime;
+                }
+
+                public void setPlayTime(int playTime) {
+                    this.playTime = playTime;
+                }
+
+                public double getVolumeDelta() {
+                    return volumeDelta;
+                }
+
+                public void setVolumeDelta(double volumeDelta) {
+                    this.volumeDelta = volumeDelta;
+                }
+
+                public String getDfsId_str() {
+                    return dfsId_str;
+                }
+
+                public void setDfsId_str(String dfsId_str) {
+                    this.dfsId_str = dfsId_str;
+                }
+            }
+
+            public static class LMusicBean {
+                /**
+                 * name : null
+                 * id : 1304626568
+                 * size : 2888038
+                 * extension : mp3
+                 * sr : 44100
+                 * dfsId : 18731280092679088
+                 * bitrate : 96000
+                 * playTime : 240613
+                 * volumeDelta : -1.71
+                 * dfsId_str : 18731280092679088
+                 */
+
+                private Object name;
+                private int id;
+                private int size;
+                private String extension;
+                private int sr;
+                private long dfsId;
+                private int bitrate;
+                private int playTime;
+                private double volumeDelta;
+                private String dfsId_str;
+
+                public Object getName() {
+                    return name;
+                }
+
+                public void setName(Object name) {
+                    this.name = name;
+                }
+
+                public int getId() {
+                    return id;
+                }
+
+                public void setId(int id) {
+                    this.id = id;
+                }
+
+                public int getSize() {
+                    return size;
+                }
+
+                public void setSize(int size) {
+                    this.size = size;
+                }
+
+                public String getExtension() {
+                    return extension;
+                }
+
+                public void setExtension(String extension) {
+                    this.extension = extension;
+                }
+
+                public int getSr() {
+                    return sr;
+                }
+
+                public void setSr(int sr) {
+                    this.sr = sr;
+                }
+
+                public long getDfsId() {
+                    return dfsId;
+                }
+
+                public void setDfsId(long dfsId) {
+                    this.dfsId = dfsId;
+                }
+
+                public int getBitrate() {
+                    return bitrate;
+                }
+
+                public void setBitrate(int bitrate) {
+                    this.bitrate = bitrate;
+                }
+
+                public int getPlayTime() {
+                    return playTime;
+                }
+
+                public void setPlayTime(int playTime) {
+                    this.playTime = playTime;
+                }
+
+                public double getVolumeDelta() {
+                    return volumeDelta;
+                }
+
+                public void setVolumeDelta(double volumeDelta) {
+                    this.volumeDelta = volumeDelta;
+                }
+
+                public String getDfsId_str() {
+                    return dfsId_str;
+                }
+
+                public void setDfsId_str(String dfsId_str) {
+                    this.dfsId_str = dfsId_str;
+                }
+            }
+
+            public static class PrivilegeBean {
+                /**
+                 * id : 473817900
+                 * fee : 0
+                 * payed : 0
+                 * st : 0
+                 * pl : 320000
+                 * dl : 320000
+                 * sp : 7
+                 * cp : 1
+                 * subp : 1
+                 * cs : false
+                 * maxbr : 999000
+                 * fl : 320000
+                 * toast : false
+                 * flag : 0
+                 */
+
+                private int id;
+                private int fee;
+                private int payed;
+                private int st;
+                private int pl;
+                private int dl;
+                private int sp;
+                private int cp;
+                private int subp;
+                private boolean cs;
+                private int maxbr;
+                private int fl;
+                private boolean toast;
+                private int flag;
+
+                public int getId() {
+                    return id;
+                }
+
+                public void setId(int id) {
+                    this.id = id;
+                }
+
+                public int getFee() {
+                    return fee;
+                }
+
+                public void setFee(int fee) {
+                    this.fee = fee;
+                }
+
+                public int getPayed() {
+                    return payed;
+                }
+
+                public void setPayed(int payed) {
+                    this.payed = payed;
+                }
+
+                public int getSt() {
+                    return st;
+                }
+
+                public void setSt(int st) {
+                    this.st = st;
+                }
+
+                public int getPl() {
+                    return pl;
+                }
+
+                public void setPl(int pl) {
+                    this.pl = pl;
+                }
+
+                public int getDl() {
+                    return dl;
+                }
+
+                public void setDl(int dl) {
+                    this.dl = dl;
+                }
+
+                public int getSp() {
+                    return sp;
+                }
+
+                public void setSp(int sp) {
+                    this.sp = sp;
+                }
+
+                public int getCp() {
+                    return cp;
+                }
+
+                public void setCp(int cp) {
+                    this.cp = cp;
+                }
+
+                public int getSubp() {
+                    return subp;
+                }
+
+                public void setSubp(int subp) {
+                    this.subp = subp;
+                }
+
+                public boolean isCs() {
+                    return cs;
+                }
+
+                public void setCs(boolean cs) {
+                    this.cs = cs;
+                }
+
+                public int getMaxbr() {
+                    return maxbr;
+                }
+
+                public void setMaxbr(int maxbr) {
+                    this.maxbr = maxbr;
+                }
+
+                public int getFl() {
+                    return fl;
+                }
+
+                public void setFl(int fl) {
+                    this.fl = fl;
+                }
+
+                public boolean isToast() {
+                    return toast;
+                }
+
+                public void setToast(boolean toast) {
+                    this.toast = toast;
+                }
+
+                public int getFlag() {
+                    return flag;
+                }
+
+                public void setFlag(int flag) {
+                    this.flag = flag;
+                }
+            }
+
+            public static class ArtistsBeanX {
+                /**
+                 * name : 黄子韬
+                 * id : 1025202
+                 * picId : 0
+                 * img1v1Id : 0
+                 * briefDesc :
+                 * picUrl : http://p4.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg
+                 * img1v1Url : http://p3.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg
+                 * albumSize : 0
+                 * alias : []
+                 * trans :
+                 * musicSize : 0
+                 */
+
+                private String name;
+                private int id;
+                private int picId;
+                private int img1v1Id;
+                private String briefDesc;
+                private String picUrl;
+                private String img1v1Url;
+                private int albumSize;
+                private String trans;
+                private int musicSize;
+                private List<?> alias;
+
+                public String getName() {
+                    return name;
+                }
+
+                public void setName(String name) {
+                    this.name = name;
+                }
+
+                public int getId() {
+                    return id;
+                }
+
+                public void setId(int id) {
+                    this.id = id;
+                }
+
+                public int getPicId() {
+                    return picId;
+                }
+
+                public void setPicId(int picId) {
+                    this.picId = picId;
+                }
+
+                public int getImg1v1Id() {
+                    return img1v1Id;
+                }
+
+                public void setImg1v1Id(int img1v1Id) {
+                    this.img1v1Id = img1v1Id;
+                }
+
+                public String getBriefDesc() {
+                    return briefDesc;
+                }
+
+                public void setBriefDesc(String briefDesc) {
+                    this.briefDesc = briefDesc;
+                }
+
+                public String getPicUrl() {
+                    return picUrl;
+                }
+
+                public void setPicUrl(String picUrl) {
+                    this.picUrl = picUrl;
+                }
+
+                public String getImg1v1Url() {
+                    return img1v1Url;
+                }
+
+                public void setImg1v1Url(String img1v1Url) {
+                    this.img1v1Url = img1v1Url;
+                }
+
+                public int getAlbumSize() {
+                    return albumSize;
+                }
+
+                public void setAlbumSize(int albumSize) {
+                    this.albumSize = albumSize;
+                }
+
+                public String getTrans() {
+                    return trans;
+                }
+
+                public void setTrans(String trans) {
+                    this.trans = trans;
+                }
+
+                public int getMusicSize() {
+                    return musicSize;
+                }
+
+                public void setMusicSize(int musicSize) {
+                    this.musicSize = musicSize;
+                }
+
+                public List<?> getAlias() {
+                    return alias;
+                }
+
+                public void setAlias(List<?> alias) {
+                    this.alias = alias;
+                }
+            }
+        }
     }
 }
