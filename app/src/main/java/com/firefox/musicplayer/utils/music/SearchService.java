@@ -33,6 +33,9 @@ public interface SearchService {
     @GET("api/song/detail/")
     Call<ResponseBody> searchMusicDetail(@QueryMap Map<String, String> text);
 
+    @GET("api/song/lyric")
+    Call<ResponseBody> searchMusicLrc(@QueryMap Map<String, String> text);
+
     @GET("api/playlist/detail")
     Call<ResponseBody> searchPlayListDetail(@Query("id")String id);
 

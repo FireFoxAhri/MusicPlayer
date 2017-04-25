@@ -104,7 +104,7 @@ public class TestActivity extends AppCompatActivity {
 //
 //            }
 //        });
-        Call<ResponseBody> call2 = SearchUtil.SearchRecommendMusicList("hot", 10, 0);
+        Call<ResponseBody> call2 = SearchUtil.SearchMusicLrc(93920);
 
         call2.enqueue(new Callback<ResponseBody>() {
             @Override

@@ -1,7 +1,11 @@
 package com.firefox.musicplayer.ui.main;
 
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,6 +19,7 @@ import android.widget.ImageView;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.firefox.musicplayer.R;
+import com.firefox.musicplayer.service.MusicPlayService;
 import com.firefox.musicplayer.ui.SearchActivity;
 import com.firefox.musicplayer.ui.base.BaseActivity;
 import com.firefox.musicplayer.ui.fragment.FirstFragment;
@@ -33,7 +38,8 @@ import butterknife.OnClick;
  */
 
 public class MainActivity extends BaseActivity {
-
+    protected MusicPlayService musicPlayService;
+    private boolean isBound = false;
     @BindView(R.id.bar_net)
     ImageView barNet;
     @BindView(R.id.bar_music)
@@ -58,16 +64,20 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this)
-
-        ;
-
+        ButterKnife.bind(this);
 
         setToolBar();
         setViewPager();
 
+        bindPlayService();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        unbindPlayService();
+    }
 
     @Override
     public void onBackPressed() {
@@ -130,6 +140,41 @@ public class MainActivity extends BaseActivity {
         @Override
         public int getCount() {
             return mFragments.size();
+        }
+    }
+
+
+    private ServiceConnection conn = new ServiceConnection() {
+
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            musicPlayService = ((MusicPlayService.PlayBinder) service).getService();
+
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+
+        }
+    };
+
+
+    public void bindPlayService()
+    {
+        if (!isBound)
+        {
+            Intent intent = new Intent(this, MusicPlayService.class);
+            bindService(intent, conn, Context.BIND_AUTO_CREATE);
+            isBound = true;
+        }
+    }
+
+    public void unbindPlayService()
+    {
+        if (isBound)
+        {
+            unbindService(conn);
+            isBound = false;
         }
     }
 }

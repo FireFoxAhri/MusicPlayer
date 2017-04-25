@@ -78,6 +78,14 @@ public class SearchUtil {
         return service.searchMusicDetail(text);
     }
 
+    public static Call<ResponseBody> SearchMusicLrc(int musicID) {
+        Map<String, String> text = new HashMap<>();
+        String id = String.valueOf(musicID);
+        text.put("id", id);
+        text.put("lv", "-1");
+        return service.searchMusicLrc(text);
+    }
+
 //暂时不做
 //    public static ResultBean parseRecommendMusicList(String s) {
 //        ResultBean resultBean = new ResultBean();
