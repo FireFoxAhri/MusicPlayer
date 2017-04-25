@@ -1,5 +1,7 @@
 package com.firefox.musicplayer.ui.main;
 
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
@@ -151,7 +153,6 @@ public class MainActivity extends BaseActivity {
 
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            musicPlayService = ((MusicPlayService.PlayBinder) service).getService();
 
         }
 
