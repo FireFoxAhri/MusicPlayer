@@ -1,6 +1,5 @@
 package com.firefox.musicplayer.service;
 
-import android.app.Application;
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;

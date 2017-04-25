@@ -8,6 +8,11 @@
     android:orientation="vertical">
 
     <include layout="@layout/title_search_layout" />
+    <ListView
+        android:id="@+id/lv_SearchList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
+        android:listSelector="@android:color/transparent"/>
 
 </LinearLayout>

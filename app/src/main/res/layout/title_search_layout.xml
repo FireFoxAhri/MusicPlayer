@@ -29,6 +29,9 @@
          android:hint="请输入音乐、歌手、歌词、用户"
          android:textColor="#FFF"
          android:textColorHint="#FFF"
+         android:imeOptions="actionDone"
+         android:maxLines="1"
+
          android:theme="@style/MyEditText"
          />
     </LinearLayout>

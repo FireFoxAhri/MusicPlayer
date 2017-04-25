@@ -1,4 +1,4 @@
-package com.firefox.musicplayer.Service;
+package com.firefox.musicplayer.service;
 
 import android.app.Service;
 import android.content.Intent;
@@ -23,9 +23,8 @@ public class PlayMusicService extends Service {
 
         String url=intent.getStringExtra("sourceuri");
         Toast.makeText(this,url, Toast.LENGTH_SHORT).show();
-          MediaPlayer player=new MediaPlayer();
-            player = MediaPlayer.create(PlayMusicService.this, Uri
-                    .parse(url));//实例化对象，通过播放本机服务器上的一首音乐
+            MediaPlayer player=new MediaPlayer();
+            player = MediaPlayer.create(PlayMusicService.this, Uri.parse(url));//实例化对象，通过播放本机服务器上的一首音乐
             player.setLooping(false);//设置不循环播放
             player.start();
 

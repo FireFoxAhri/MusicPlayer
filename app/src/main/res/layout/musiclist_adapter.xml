@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/ml_adapter_btn_play">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ml_adapter_iv_album"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            fresco:placeholderImage="@drawable/music_default"
+            />
+
+
+
+        <TextView
+            android:id="@+id/ml_adapter_tv_songname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@+id/ml_adapter_iv_album"
+            android:layout_toRightOf="@+id/ml_adapter_iv_album"
+            android:text="歌曲名"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <TextView
+            android:id="@+id/ml_adapter_tv_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ml_adapter_tv_songname"
+            android:layout_marginLeft="3dp"
+            android:layout_toEndOf="@+id/ml_adapter_iv_album"
+            android:layout_toRightOf="@+id/ml_adapter_iv_album"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxWidth="200dp"
+            android:singleLine="true"
+            android:text="歌手"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+
+        <ImageView
+            android:id="@+id/ml_adapter_btn_menu"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+
+            android:scaleType="centerInside"
+            android:src="@drawable/adapter_menu"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

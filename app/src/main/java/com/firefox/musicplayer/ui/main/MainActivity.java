@@ -1,5 +1,7 @@
 package com.firefox.musicplayer.ui.main;
 
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
@@ -15,7 +17,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.firefox.musicplayer.R;
 import com.firefox.musicplayer.service.MusicPlayService;
 import com.firefox.musicplayer.ui.SearchActivity;

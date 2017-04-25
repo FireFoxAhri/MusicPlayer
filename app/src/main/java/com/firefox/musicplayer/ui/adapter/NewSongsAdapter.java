@@ -10,7 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.drawee.view.SimpleDraweeView;
-import com.firefox.musicplayer.Service.PlayMusicService;
+import com.firefox.musicplayer.service.PlayMusicService;
 import com.firefox.musicplayer.R;
 import com.firefox.musicplayer.utils.InfoClass.NewSongsInfo;
 
