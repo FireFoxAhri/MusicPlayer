@@ -112,7 +112,7 @@ public class MainActivity extends BaseActivity {
         tabs.add(barPaly);
         final FirstFragment firstFragment = new FirstFragment();
         final MainFragment mainFragment = new MainFragment();
-        final PlayFragment playFragment=new PlayFragment();
+        final PlayFragment playFragment = new PlayFragment();
         CustomViewPagerAdapter customViewPagerAdapter = new CustomViewPagerAdapter(getSupportFragmentManager());
         customViewPagerAdapter.addFragment(firstFragment);
         customViewPagerAdapter.addFragment(mainFragment);
@@ -162,20 +162,16 @@ public class MainActivity extends BaseActivity {
     };
 
 
-    public void bindPlayService()
-    {
-        if (!isBound)
-        {
+    public void bindPlayService() {
+        if (!isBound) {
             Intent intent = new Intent(this, MusicPlayService.class);
             bindService(intent, conn, Context.BIND_AUTO_CREATE);
             isBound = true;
         }
     }
 
-    public void unbindPlayService()
-    {
-        if (isBound)
-        {
+    public void unbindPlayService() {
+        if (isBound) {
             unbindService(conn);
             isBound = false;
         }
