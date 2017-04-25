@@ -8,11 +8,10 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.firefox.musicplayer.R;
-import com.firefox.musicplayer.bean.SearchMusicBean;
+import com.firefox.musicplayer.bean.RecommendMusicBean;
 import com.firefox.musicplayer.ui.adapter.NewSongsAdapter;
 import com.firefox.musicplayer.utils.InfoClass.NewSongsInfo;
 import com.firefox.musicplayer.utils.music.SearchUtil;
@@ -24,7 +23,6 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import butterknife.Unbinder;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -63,22 +61,22 @@ public class FirstFirstFragment extends Fragment {
 
     private void setRecyclerView() {
 
-        initNewSongsInfo();
-        Call<ResponseBody> call = SearchUtil.SearchMusic("十年", 0, 20);
-        call.enqueue(new Callback<ResponseBody>() {
+      //  Call<ResponseBody> call = SearchUtil.SearchMusic("光辉岁月", 0, 20);
+        Call<ResponseBody> call =SearchUtil.SearchHotMusic();
+                call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 Gson gson = new Gson();
 
 
                 try {
-                    SearchMusicBean result = gson.fromJson(response.body().string(), SearchMusicBean.class);
-                    List<SearchMusicBean.ResultBean.SongsBean> songs = result.getResult().getSongs();
-                    SearchMusicBean.ResultBean.SongsBean s = songs.get(1);
+                   RecommendMusicBean recommendMusicBean =  gson.fromJson(response.body().string(), RecommendMusicBean .class);
+                   List<RecommendMusicBean.ResultBean> result =recommendMusicBean.getResult();
+                    //RecommendMusicBean.ResultBean.SongBean s = songs.get(1);
 
-                    for (SearchMusicBean.ResultBean.SongsBean song : songs) {
-                        System.out.println(song.getName() + "   " + song.getAl().getPicUrl());
-                        NewSongsInfo newSongsInfo = new NewSongsInfo(song.getName(), song.getAl().getPicUrl());
+                    for (RecommendMusicBean.ResultBean r: result) {
+                        System.out.println(r.getSong().getName() + "   " + r.getSong().getAlbum().getPicUrl()+" "+r.getSong().getMp3Url());
+                        NewSongsInfo newSongsInfo = new NewSongsInfo(r.getSong().getName(), r.getSong().getAlbum().getPicUrl(),r.getSong().getMp3Url());
                         newSongsInfos.add(newSongsInfo);
                     }
                     adapter = new NewSongsAdapter(newSongsInfos);
@@ -106,22 +104,11 @@ public class FirstFirstFragment extends Fragment {
 
     }
 
-    private void initNewSongsInfo() {
-
-
-    }
-
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
-    }
-
-    @OnClick(R.id.new_songs_recycleview)
-    public void onViewClicked() {
-
-        Toast.makeText(getContext(), "afdasfasdfasdfasfadsfsdf", Toast.LENGTH_SHORT).show();
     }
 
 
