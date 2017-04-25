@@ -6,11 +6,22 @@ package com.firefox.musicplayer.utils.InfoClass;
 public class NewSongsInfo{
     private String name;
     private String sourceurl;
+    private String  imageurl;
 
-    public NewSongsInfo(String name, String sourceurl) {
+    public NewSongsInfo(String name, String imageurl, String sourceurl) {
         this.name = name;
         this.sourceurl = sourceurl;
+        this.imageurl = imageurl;
     }
+
+    public String getImageurl() {
+        return imageurl;
+    }
+
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
+    }
+
 
     public String getName() {
         return name;

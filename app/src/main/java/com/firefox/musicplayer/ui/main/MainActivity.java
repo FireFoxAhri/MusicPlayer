@@ -1,7 +1,5 @@
 package com.firefox.musicplayer.ui.main;
 
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
@@ -24,6 +22,7 @@ import com.firefox.musicplayer.ui.SearchActivity;
 import com.firefox.musicplayer.ui.base.BaseActivity;
 import com.firefox.musicplayer.ui.fragment.FirstFragment;
 import com.firefox.musicplayer.ui.fragment.MainFragment;
+import com.firefox.musicplayer.ui.fragment.PlayFragment;
 import com.firefox.musicplayer.widget.CustomViewPager;
 
 import java.util.ArrayList;
@@ -44,12 +43,13 @@ public class MainActivity extends BaseActivity {
     ImageView barNet;
     @BindView(R.id.bar_music)
     ImageView barMusic;
-    @BindView(R.id.bar_friends)
-    ImageView barFriends;
+
     @BindView(R.id.main_viewpager)
     CustomViewPager mainViewpager;
     @BindView(R.id.bar_search)
     ImageView barSearch;
+    @BindView(R.id.bar_paly)
+    ImageView barPaly;
 
     @OnClick(R.id.bar_search)
     public void onViewClicked() {
@@ -65,6 +65,8 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        ButterKnife.bind(this);
+
 
         setToolBar();
         setViewPager();
@@ -106,17 +108,18 @@ public class MainActivity extends BaseActivity {
     private void setViewPager() {
         tabs.add(barNet);
         tabs.add(barMusic);
-
+        tabs.add(barPaly);
         final FirstFragment firstFragment = new FirstFragment();
         final MainFragment mainFragment = new MainFragment();
-
+        final PlayFragment playFragment=new PlayFragment();
         CustomViewPagerAdapter customViewPagerAdapter = new CustomViewPagerAdapter(getSupportFragmentManager());
         customViewPagerAdapter.addFragment(firstFragment);
         customViewPagerAdapter.addFragment(mainFragment);
+        customViewPagerAdapter.addFragment(playFragment);
 //        System.out.println(customViewPagerAdapter.getCount());
         mainViewpager.setAdapter(customViewPagerAdapter);
         mainViewpager.setCurrentItem(0);
-        barMusic.setSelected(true);
+        //barMusic.setSelected(true);
     }
 
 
