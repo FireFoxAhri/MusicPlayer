@@ -1,10 +1,12 @@
 package com.firefox.musicplayer.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by FireFox on 2017/4/24.
  */
 
-public class Music {
+public class Music implements Serializable {
     private String musicName;
     private String musicURL;
     private String musicID;
@@ -60,35 +62,6 @@ public class Music {
 
     public void setMusicID(String musicID) {
         this.musicID = musicID;
-
-
-//        Call<ResponseBody> call3 = SearchUtil.SearchMusicLrc(66842);//Integer.parseInt(this.musicID)
-//        call3.enqueue(new Callback<ResponseBody>() {
-//            @Override
-//            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-//                Gson gson = new Gson();
-//
-//                try {
-//                    LyricBean lrcBean=gson.fromJson(response.body().string(), LyricBean.class);
-//                    LyricBean.LrcBean lrcBean1=lrcBean.getLrc();
-//
-//                    lrcURL=lrcBean1.getLyric();
-//
-//
-//
-//
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//
-//
-//            }
-//
-//            @Override
-//            public void onFailure(Call<ResponseBody> call, Throwable t) {
-//
-//            }
-//        });
 
     }
 

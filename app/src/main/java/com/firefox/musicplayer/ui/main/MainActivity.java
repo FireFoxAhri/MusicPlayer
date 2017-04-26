@@ -152,7 +152,7 @@ public class MainActivity extends BaseActivity {
 
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-
+            musicPlayService = ((MusicPlayService.PlayBinder) service).getService();
         }
 
         @Override

@@ -75,7 +75,7 @@ public class MusicStore extends SQLiteOpenHelper {
         return temp;
     }
 
-    public ArrayList<Music> getPlayList() {
+    public static ArrayList<Music> getPlayList() {
         ArrayList<Music> temp = new ArrayList<Music>();
         Cursor cursor = db.query("musicplaylist", new String[]{"musicid", "musicurl", "musicname", "salbumurl", "balbumurl", "lrcurl", "artistname", "islocal"}, null, null, null, null, null);
         if (cursor == null) {

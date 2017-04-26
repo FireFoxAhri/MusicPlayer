@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.firefox.musicplayer.bean.Music;
+import com.firefox.musicplayer.database.MusicStore;
 
 import java.util.ArrayList;
 
@@ -17,6 +18,15 @@ public class MainApplication extends Application {
     private static Context context;
     private static ArrayList<Music> playList = null;
 
+    public static int getCurrentIndex() {
+        return currentIndex;
+    }
+
+    public static void setCurrentIndex(int currentIndex) {
+        MainApplication.currentIndex = currentIndex;
+    }
+
+    private static int currentIndex=0;
 
     @Override
     public void onCreate() {
@@ -26,16 +36,12 @@ public class MainApplication extends Application {
         context = getApplicationContext();
 
         if (playList == null) {
-
+        playList= MusicStore.getPlayList();
         }
     }
 
     public static ArrayList<Music> getPlayList() {
         return playList;
-    }
-
-    public static void setPlayList(ArrayList<Music> playList) {
-        MainApplication.playList = playList;
     }
 
     public static Context getInstance() {

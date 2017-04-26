@@ -1,6 +1,8 @@
 package com.firefox.musicplayer.service;
 
 import android.app.Service;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Binder;
@@ -13,6 +15,7 @@ import com.firefox.musicplayer.listener.OnLoadInformationListener;
 import com.firefox.musicplayer.listener.OnProgressListener;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -23,14 +26,12 @@ import java.util.Random;
 public class MusicPlayService extends Service implements MediaPlayer.OnCompletionListener {
     private OnProgressListener onProgressListener;
     private OnLoadInformationListener onLoadInformationListener;
-    ArrayList<Music> playList = null;
     static MediaPlayer mediaPlayer;
 
     public static final int ORDER_PLAY = 0;//顺序播放
     public static final int RANDOM_PLAY = 1;//随机播放
     public static final int SINGLE_PLAY = 2;//单曲循环
     private int playMode = ORDER_PLAY;
-    private int currentIndex = 0;
 
 
     boolean flag_play = false;
@@ -40,11 +41,12 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
     public void onCreate() {
         super.onCreate();
         mediaPlayer = new MediaPlayer();
-        playList = MainApplication.getPlayList();
         mediaPlayer.setOnCompletionListener(this);
     }
 
     public void startPlay(int index) {
+        ArrayList<Music> playList = MainApplication.getPlayList();
+        int currentIndex = MainApplication.getCurrentIndex();
         if (index >= 0 && index < playList.size()) {
             try {
                 flag_play = true;
@@ -78,6 +80,8 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
 
     @Override
     public void onCompletion(MediaPlayer mp) {
+        ArrayList<Music> playList = MainApplication.getPlayList();
+        int currentIndex=MainApplication.getCurrentIndex();
         switch (playMode) {
             case ORDER_PLAY://顺序播放
                 startPlay(++currentIndex);
@@ -90,6 +94,28 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
                 mediaPlayer.reset();
                 startPlay(currentIndex);
                 break;
+        }
+    }
+
+    private class MyReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            ArrayList<Music> playList = MainApplication.getPlayList();
+            int currentIndex = MainApplication.getCurrentIndex();
+            try {
+                if (intent.getAction().equals("start")) {
+                    Music music = (Music) intent.getSerializableExtra("music");
+                    if (playList.contains(music)) {
+                        currentIndex = playList.indexOf(music);
+                    } else {
+                        playList.add(music);
+                        currentIndex = playList.size() - 1;
+                    }
+                    startPlay(currentIndex);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 }
