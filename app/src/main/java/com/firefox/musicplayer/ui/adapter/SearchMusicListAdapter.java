@@ -1,7 +1,6 @@
 package com.firefox.musicplayer.ui.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.firefox.musicplayer.R;
 import com.firefox.musicplayer.bean.Music;
@@ -52,7 +50,7 @@ public class SearchMusicListAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder = null;
         if (convertView == null)
         {
@@ -68,14 +66,20 @@ public class SearchMusicListAdapter extends BaseAdapter {
         {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-//        viewHolder.Menu.setOnClickListener(new View.OnClickListener()
-//        {
-//            @Override
-//            public void onClick(View v)
-//            {
-//                ((MainActivity) context).showMenu(v, musics.get(position), listView);
-//            }
-//        });
+        viewHolder.Menu.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if(context.toString().contains("MainActivity"))
+                ((MainActivity) context).showMenu(v, musics.get(position), listView);
+                else if(context.toString().contains("SearchActivity"))
+                {
+                    ((SearchActivity) context).showMenu(v, musics.get(position), listView);
+                }
+
+            }
+        });
 //        viewHolder.Play.setOnClickListener(new View.OnClickListener()
 //        {
 //            @Override
