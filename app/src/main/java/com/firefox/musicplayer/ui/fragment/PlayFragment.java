@@ -10,26 +10,23 @@ import android.widget.ImageView;
 
 import com.firefox.musicplayer.R;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
 /**
  * Created by 俗 on 2017/4/24.
  */
 
 public class PlayFragment extends Fragment {
-    @BindView(R.id.playing_play)
-    ImageView playingPlay;
-    Unbinder unbinder;
 
-    @Nullable
+    ImageView playingPlay;
+
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_play, container, false);
-        unbinder = ButterKnife.bind(this, view);
+        View view = inflater.inflate(R.layout.player, container, false);
+
         return view;
 
     }
@@ -37,7 +34,7 @@ public class PlayFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        unbinder.unbind();
+
     }
 
     @OnClick(R.id.playing_play)

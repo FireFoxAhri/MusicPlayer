@@ -19,4 +19,11 @@
         <item name="colorControlNormal">#FFF</item>
         <item name="colorControlActivated">#FFF</item>
     </style>
+    <style name="AnimBottom">
+        <item name="android:windowEnterAnimation">@anim/popshow_anim</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/pophidden_anim</item>
+    </style>
+
 </resources>

@@ -99,7 +99,8 @@ public class MusicStore extends SQLiteOpenHelper {
     }
 
     public static boolean isLoved(Music music) {
-        Cursor cursor = db.query("musiclovelist", new String[]{"musicurl"}, "musicurl='" + music.getMusicURL() + "'", null, null, null, null);
+        Cursor cursor = null;
+                //db.query("musiclovelist", new String[]{"musicurl"}, "musicurl='" + music.getMusicURL() + "'", null, null, null, null);
         if (cursor == null) {
             return false;
         } else if (!cursor.moveToFirst()) {

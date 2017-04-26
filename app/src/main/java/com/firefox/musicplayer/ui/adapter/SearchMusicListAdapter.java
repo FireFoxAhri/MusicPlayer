@@ -11,9 +11,12 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firefox.musicplayer.R;
 import com.firefox.musicplayer.bean.Music;
+import com.firefox.musicplayer.ui.SearchActivity;
+import com.firefox.musicplayer.ui.main.MainActivity;
 
 import java.util.ArrayList;
 
@@ -49,7 +52,7 @@ public class SearchMusicListAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder = null;
         if (convertView == null)
         {
@@ -73,16 +76,41 @@ public class SearchMusicListAdapter extends BaseAdapter {
 //                ((MainActivity) context).showMenu(v, musics.get(position), listView);
 //            }
 //        });
-        viewHolder.Play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//        viewHolder.Play.setOnClickListener(new View.OnClickListener()
+//        {
+//            @Override
+//            public void onClick(View v)
+//            {
+//                new AsyncTask<Music, Void, Music>()
+//                {
+//                    @Override
+//                    protected Music doInBackground(Music... params)
+//                    {
+//                        Music music = new Music();
+//                        if (params[0].isLocal())
+//                        {
+//                            music = GetInformation.getExtraInformation(params[0]);
+//                        } else
+//                        {
+//                            music = GetInformation.getAllInformation(params[0]);
+//                        }
+//                        return music;
+//                    }
 
-                Intent broadcast = new Intent();
-                broadcast.setAction("start");
-                broadcast.putExtra("music", musics.get(position));
-                context.sendBroadcast(broadcast);
-            }
-        });
+//                    @Override
+//                    protected void onPostExecute(Music music)
+//                    {
+//                        super.onPostExecute(music);
+//
+//                        MusicPlayList musicPlayList = (MusicPlayList) context.getApplicationContext();
+//                        musicPlayList.insertMusic(musics.get(position));
+//                        Intent broadcast = new Intent();
+//                        broadcast.setAction("start");
+//                        context.sendBroadcast(broadcast);
+//                    }
+//                }.execute(musics.get(position));
+//            }
+//        });
         viewHolder.SongName.setText(musics.get(position).getMusicName());
         viewHolder.Singer.setText(musics.get(position).getArtistName() + " - " + musics.get(position).getAlbumName());
 

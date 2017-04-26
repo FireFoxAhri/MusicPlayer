@@ -7,7 +7,12 @@ import android.net.Uri;
 import android.os.IBinder;
 import android.widget.Toast;
 
+import com.firefox.musicplayer.ui.music.MusicPlayList;
+
 public class PlayMusicService extends Service {
+
+    MusicPlayList musicPlayList;
+
     public PlayMusicService() {
     }
 
@@ -41,4 +46,8 @@ public class PlayMusicService extends Service {
         // TODO: Return the communication channel to the service.
         throw new UnsupportedOperationException("Not yet implemented");
     }
+
+
+
+
 }

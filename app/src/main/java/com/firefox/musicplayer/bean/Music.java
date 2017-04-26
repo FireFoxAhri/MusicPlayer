@@ -63,6 +63,35 @@ public class Music implements Serializable {
     public void setMusicID(String musicID) {
         this.musicID = musicID;
 
+
+//        Call<ResponseBody> call3 = SearchUtil.SearchMusicLrc(66842);//Integer.parseInt(this.musicID)
+//        call3.enqueue(new Callback<ResponseBody>() {
+//            @Override
+//            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+//                Gson gson = new Gson();
+//
+//                try {
+//                    LyricBean lrcBean=gson.fromJson(response.body().string(), LyricBean.class);
+//                    LyricBean.LrcBean lrcBean1=lrcBean.getLrc();
+//
+//                    lrcURL=lrcBean1.getLyric();
+//
+//
+//
+//
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//
+//
+//            }
+//
+//            @Override
+//            public void onFailure(Call<ResponseBody> call, Throwable t) {
+//
+//            }
+//        });
+
     }
 
     public String getAlbumName() {

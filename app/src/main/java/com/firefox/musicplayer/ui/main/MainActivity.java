@@ -4,6 +4,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
@@ -15,11 +16,21 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import com.firefox.musicplayer.R;
+import com.firefox.musicplayer.bean.Music;
 import com.firefox.musicplayer.service.MusicPlayService;
 import com.firefox.musicplayer.ui.SearchActivity;
+import com.firefox.musicplayer.ui.adapter.MusicListMenu_adapter;
 import com.firefox.musicplayer.ui.base.BaseActivity;
 import com.firefox.musicplayer.ui.fragment.FirstFragment;
 import com.firefox.musicplayer.ui.fragment.MainFragment;
@@ -176,6 +187,39 @@ public class MainActivity extends BaseActivity {
             isBound = false;
         }
     }
+
+
+    public void showMenu(View view, final Music music, ListView listView)
+    {
+        final View contentView = LayoutInflater.from(this).inflate(R.layout.musicplaylist_popupwindow, null);
+        final PopupWindow popupWindow = new PopupWindow(contentView, LinearLayout.LayoutParams.MATCH_PARENT, 800, true);
+        popupWindow.setAnimationStyle(R.style.AnimBottom);
+        popupWindow.setTouchable(true);
+        popupWindow.setBackgroundDrawable(new BitmapDrawable());
+        ((ListView) contentView.findViewById(R.id.lv_musiclist)).setAdapter(new MusicListMenu_adapter(this, music));
+
+        ((TextView) contentView.findViewById(R.id.mpl_ppw_tv_songnum)).setText("歌曲：" + music.getMusicName());
+        contentView.setOnTouchListener(new View.OnTouchListener()
+        {
+            public boolean onTouch(View v, MotionEvent event)
+            {
+                int height = contentView.findViewById(R.id.popupwindow).getTop();
+                int y = (int) event.getY();
+                if (event.getAction() == MotionEvent.ACTION_UP)
+                {
+                    if (y < height)
+                    {
+                        popupWindow.dismiss();
+                    }
+                }
+                return true;
+            }
+        });
+        popupWindow.showAtLocation(findViewById(R.id.local_list_layout), Gravity.BOTTOM, 0, 0);
+        popupWindow.showAsDropDown(view);
+    }
+
+
 }
 
 
