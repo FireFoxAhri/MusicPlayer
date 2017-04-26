@@ -9,59 +9,50 @@ import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import com.firefox.musicplayer.MainApplication;
 import com.firefox.musicplayer.R;
 import com.firefox.musicplayer.service.MusicPlayService;
-import com.firefox.musicplayer.ui.music.MusicPlayList;
 
 /**
  * Created by 凛 on 2016/5/16.
  */
-public class MusicPlayList_adapter extends BaseAdapter
-{
-	private LayoutInflater inflater;
-	private Context context;
-	private MusicPlayList musicPlayList;
-	private MusicPlayService musicPlayService;
-	PopupWindow popupWindow;
-	public MusicPlayList_adapter(Context context, MusicPlayService musicPlayService, PopupWindow popupWindow)
-	{
-		this.context = context;
-		this.musicPlayList = ((MusicPlayList) context.getApplicationContext());
-		this.inflater = inflater.from(context);
-		this.musicPlayService = musicPlayService;
-		this.popupWindow=popupWindow;
-	}
+public class MusicPlayList_adapter extends BaseAdapter {
+    private LayoutInflater inflater;
+    private Context context;
+    private MainApplication musicPlayList;
+    private MusicPlayService musicPlayService;
+    PopupWindow popupWindow;
 
-	@Override
-	public int getCount()
-	{
-		return musicPlayList.getMusicList().size();
-	}
+    public MusicPlayList_adapter(Context context, MusicPlayService musicPlayService, PopupWindow popupWindow) {
+        this.context = context;
+        this.musicPlayList = ((MainApplication) context.getApplicationContext());
+        this.inflater = inflater.from(context);
+        this.musicPlayService = musicPlayService;
+        this.popupWindow = popupWindow;
+    }
 
-	@Override
-	public Object getItem(int position)
-	{
-		return null;
-	}
+    @Override
+    public int getCount() {
+        return musicPlayList.getPlayList().size();
+    }
 
-	@Override
-	public long getItemId(int position)
-	{
-		return 0;
-	}
+    @Override
+    public Object getItem(int position) {
+        return null;
+    }
 
-	@Override
-	public View getView(final int position, View convertView, final ViewGroup parent)
-	{
-		if (convertView == null)
-		{
-			convertView = inflater.inflate(R.layout.musicplaylist_adapter, null);
-		}
-		if (musicPlayList.getMusicList().size() != 0)
-		{
-			((TextView) convertView.findViewById(R.id.mpl_adapter_tv_songname)).setText(musicPlayList.getMusicList().get(position).getMusicName() + " - "+musicPlayList.getMusicList().get(position).getArtistName());
+    @Override
+    public long getItemId(int position) {
+        return 0;
+    }
 
-
+    @Override
+    public View getView(final int position, View convertView, final ViewGroup parent) {
+        if (convertView == null) {
+            convertView = inflater.inflate(R.layout.musicplaylist_adapter, null);
+        }
+        if (musicPlayList.getPlayList().size() != 0) {
+            ((TextView) convertView.findViewById(R.id.mpl_adapter_tv_songname)).setText(musicPlayList.getPlayList().get(position).getMusicName() + " - " + musicPlayList.getPlayList().get(position).getArtistName());
 
 
 //			((LinearLayout) convertView.findViewById(R.id.mpl_adapter_btn_play)).setOnClickListener(new View.OnClickListener()
@@ -75,7 +66,7 @@ public class MusicPlayList_adapter extends BaseAdapter
 //					popupWindow.dismiss();
 //			}
 //			});
-			((ImageView)convertView.findViewById(R.id.mpl_adapter_btn_delete)).setImageDrawable(context.getResources().getDrawable(R.drawable.play_list_delete));
+            ((ImageView) convertView.findViewById(R.id.mpl_adapter_btn_delete)).setImageDrawable(context.getResources().getDrawable(R.drawable.play_list_delete));
 //			convertView.findViewById(R.id.mpl_adapter_btn_delete).setOnClickListener(new View.OnClickListener()
 //			{
 //				@Override
@@ -96,12 +87,12 @@ public class MusicPlayList_adapter extends BaseAdapter
 //			});
 
 
-			if (position == musicPlayList.getCurrentIndex())
-				((ImageView) convertView.findViewById(R.id.mpl_adapter_iv_isplaying)).setImageDrawable(context.getResources().getDrawable(R.drawable.play_playlist_icn_playing));
-			else
-				((ImageView) convertView.findViewById(R.id.mpl_adapter_iv_isplaying)).setImageDrawable(null);
-		}
-		return convertView;
-	}
+            if (position == musicPlayList.getCurrentIndex())
+                ((ImageView) convertView.findViewById(R.id.mpl_adapter_iv_isplaying)).setImageDrawable(context.getResources().getDrawable(R.drawable.play_playlist_icn_playing));
+            else
+                ((ImageView) convertView.findViewById(R.id.mpl_adapter_iv_isplaying)).setImageDrawable(null);
+        }
+        return convertView;
+    }
 
 }
