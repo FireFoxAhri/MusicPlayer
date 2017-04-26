@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Binder;
 import android.os.IBinder;
+import android.support.annotation.IntDef;
 import android.support.annotation.Nullable;
 
 import com.firefox.musicplayer.MainApplication;
@@ -31,6 +32,15 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
     public static final int ORDER_PLAY = 0;//顺序播放
     public static final int RANDOM_PLAY = 1;//随机播放
     public static final int SINGLE_PLAY = 2;//单曲循环
+
+    public int getPlayMode() {
+        return playMode;
+    }
+
+    public void setPlayMode(int playMode) {
+        this.playMode = playMode;
+    }
+
     private int playMode = ORDER_PLAY;
 
 
@@ -42,6 +52,11 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
         super.onCreate();
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setOnCompletionListener(this);
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        return START_STICKY;
     }
 
     public void startPlay(int index) {
@@ -67,12 +82,12 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
 
 
     public class PlayBinder extends Binder {
+
         public MusicPlayService getService() {
             return MusicPlayService.this;
         }
     }
 
-    @Nullable
     @Override
     public IBinder onBind(Intent intent) {
         return new PlayBinder();

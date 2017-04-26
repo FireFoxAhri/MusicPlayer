@@ -16,6 +16,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -25,6 +26,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firefox.musicplayer.R;
 import com.firefox.musicplayer.bean.Music;
@@ -49,7 +51,8 @@ import butterknife.OnClick;
  */
 
 public class MainActivity extends BaseActivity {
-    protected MusicPlayService musicPlayService;
+
+    private MusicPlayService musicPlayService;
     private boolean isBound = false;
     @BindView(R.id.bar_net)
     ImageView barNet;
@@ -77,8 +80,6 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        ButterKnife.bind(this);
-
 
         setToolBar();
         setViewPager();
@@ -89,7 +90,6 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
         unbindPlayService();
     }
 
@@ -164,11 +164,14 @@ public class MainActivity extends BaseActivity {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             musicPlayService = ((MusicPlayService.PlayBinder) service).getService();
+            isBound=true;
+            Log.v("+++", "bind success");
+            Toast.makeText(musicPlayService, "bind success", Toast.LENGTH_SHORT).show();
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-
+            isBound = false;
         }
     };
 
@@ -177,20 +180,20 @@ public class MainActivity extends BaseActivity {
         if (!isBound) {
             Intent intent = new Intent(this, MusicPlayService.class);
             bindService(intent, conn, Context.BIND_AUTO_CREATE);
-            isBound = true;
         }
     }
 
     public void unbindPlayService() {
         if (isBound) {
             unbindService(conn);
-            isBound = false;
         }
     }
 
+    public MusicPlayService getMusicPlayService() {
+        return musicPlayService;
+    }
 
-    public void showMenu(View view, final Music music, ListView listView)
-    {
+    public void showMenu(View view, final Music music, ListView listView) {
         final View contentView = LayoutInflater.from(this).inflate(R.layout.musicplaylist_popupwindow, null);
         final PopupWindow popupWindow = new PopupWindow(contentView, LinearLayout.LayoutParams.MATCH_PARENT, 800, true);
         popupWindow.setAnimationStyle(R.style.AnimBottom);
@@ -199,16 +202,12 @@ public class MainActivity extends BaseActivity {
         ((ListView) contentView.findViewById(R.id.lv_musiclist)).setAdapter(new MusicListMenu_adapter(this, music));
 
         ((TextView) contentView.findViewById(R.id.mpl_ppw_tv_songnum)).setText("歌曲：" + music.getMusicName());
-        contentView.setOnTouchListener(new View.OnTouchListener()
-        {
-            public boolean onTouch(View v, MotionEvent event)
-            {
+        contentView.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent event) {
                 int height = contentView.findViewById(R.id.popupwindow).getTop();
                 int y = (int) event.getY();
-                if (event.getAction() == MotionEvent.ACTION_UP)
-                {
-                    if (y < height)
-                    {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (y < height) {
                         popupWindow.dismiss();
                     }
                 }

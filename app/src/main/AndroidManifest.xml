@@ -1,7 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.firefox.musicplayer">
-   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".MainApplication"
         android:allowBackup="true"
@@ -39,5 +41,10 @@
             android:theme="@style/LoginTheme">
 
         </activity>
+
+        <service
+            android:name=".service.MusicPlayService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 </manifest>

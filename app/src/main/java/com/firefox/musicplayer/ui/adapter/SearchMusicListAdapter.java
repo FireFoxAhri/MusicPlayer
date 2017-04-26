@@ -68,14 +68,14 @@ public class SearchMusicListAdapter extends BaseAdapter {
         {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-//        viewHolder.Menu.setOnClickListener(new View.OnClickListener()
-//        {
-//            @Override
-//            public void onClick(View v)
-//            {
-//                ((MainActivity) context).showMenu(v, musics.get(position), listView);
-//            }
-//        });
+        viewHolder.Menu.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                ((MainActivity) context).showMenu(v, musics.get(position), listView);
+            }
+        });
         viewHolder.Play.setOnClickListener(new View.OnClickListener()
         {
             @Override
