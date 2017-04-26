@@ -50,8 +50,12 @@ public interface SearchService {
     @GET("discover/playlist/")
     Call<ResponseBody> searchRecommendMusicList(@QueryMap Map<String,String> text);
 
+    @GET("discover/playlist/weapi/v1/play/record")
+    Call<ResponseBody> searchUserRecord(Map<String, String> text);
+
     //未能成功
     @FormUrlEncoded
     @POST("weapi/v1/discovery/recommend/songs")
     Call<ResponseBody> searchRecommend(@Query("csrf_token") String csrf, @FieldMap Map<String, String> text);
+
 }

@@ -43,7 +43,11 @@ public class SearchUtil {
         return service.searchHotMusic(text);
     }
 
-
+    public static Call<ResponseBody> SearchUserRecord(int userID){
+        String data = "{\"uid\":" + userID + ",\"limit\":1000,\"offset\":0,\"total\":true,\"type\":\"-1\"}";
+        Map<String, String> text = EncryptUtil.encrypt(data);
+        return service.searchUserRecord(text);
+    }
 
     public static Call<ResponseBody> SearchRecommendMusicList(String order, int limit, int offset) {
         Map<String, String> text = new HashMap<>();
