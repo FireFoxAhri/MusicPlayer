@@ -52,7 +52,7 @@ public class SearchMusicListAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder = null;
         if (convertView == null)
         {
@@ -76,41 +76,17 @@ public class SearchMusicListAdapter extends BaseAdapter {
 //                ((MainActivity) context).showMenu(v, musics.get(position), listView);
 //            }
 //        });
-//        viewHolder.Play.setOnClickListener(new View.OnClickListener()
-//        {
-//            @Override
-//            public void onClick(View v)
-//            {
-//                new AsyncTask<Music, Void, Music>()
-//                {
-//                    @Override
-//                    protected Music doInBackground(Music... params)
-//                    {
-//                        Music music = new Music();
-//                        if (params[0].isLocal())
-//                        {
-//                            music = GetInformation.getExtraInformation(params[0]);
-//                        } else
-//                        {
-//                            music = GetInformation.getAllInformation(params[0]);
-//                        }
-//                        return music;
-//                    }
-
-//                    @Override
-//                    protected void onPostExecute(Music music)
-//                    {
-//                        super.onPostExecute(music);
-//
-//                        MusicPlayList musicPlayList = (MusicPlayList) context.getApplicationContext();
-//                        musicPlayList.insertMusic(musics.get(position));
-//                        Intent broadcast = new Intent();
-//                        broadcast.setAction("start");
-//                        context.sendBroadcast(broadcast);
-//                    }
-//                }.execute(musics.get(position));
-//            }
-//        });
+        viewHolder.Play.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent play = new Intent();
+                play.setAction("start");
+                play.putExtra("music", musics.get(position));
+                context.sendBroadcast(play);
+            }
+        });
         viewHolder.SongName.setText(musics.get(position).getMusicName());
         viewHolder.Singer.setText(musics.get(position).getArtistName() + " - " + musics.get(position).getAlbumName());
 

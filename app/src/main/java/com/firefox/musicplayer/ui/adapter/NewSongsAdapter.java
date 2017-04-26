@@ -10,7 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.drawee.view.SimpleDraweeView;
-import com.firefox.musicplayer.service.PlayMusicService;
 import com.firefox.musicplayer.R;
 import com.firefox.musicplayer.utils.InfoClass.NewSongsInfo;
 
@@ -74,9 +73,6 @@ public class NewSongsAdapter extends RecyclerView.Adapter<NewSongsAdapter.ViewHo
                 Toast.makeText(v.getContext(), "图片被点击", Toast.LENGTH_SHORT).show();
                 int position=holder.getAdapterPosition();
                 NewSongsInfo newsongs=newSongsInfos.get(position);
-                Intent intent=new Intent(v.getContext(), PlayMusicService.class);
-                intent.putExtra("sourceuri",newsongs.getSourceurl());
-                v.getContext().startService(intent);
             }
         });
 
