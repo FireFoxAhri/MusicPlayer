@@ -1,6 +1,5 @@
 package com.firefox.musicplayer.ui.adapter;
 
-import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -72,7 +71,10 @@ public class NewSongsAdapter extends RecyclerView.Adapter<NewSongsAdapter.ViewHo
             public void onClick(View v) {
                 Toast.makeText(v.getContext(), "图片被点击", Toast.LENGTH_SHORT).show();
                 int position=holder.getAdapterPosition();
-                NewSongsInfo newsongs=newSongsInfos.get(position);
+//                NewSongsInfo newsongs=newSongsInfos.get(position);
+//                Intent intent=new Intent(v.getContext(), PlayMusicService.class);
+//                intent.putExtra("sourceuri",newsongs.getSourceurl());
+//                v.getContext().startService(intent);
             }
         });
 

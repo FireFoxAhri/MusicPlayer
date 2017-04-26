@@ -34,9 +34,9 @@ public class MainApplication extends Application {
         Fresco.initialize(this);
         context = getApplicationContext();
 
+        MusicStore musicStore=new MusicStore(this);
         if (playList == null) {
-            MusicStore database = new MusicStore(this);
-            playList= MusicStore.getPlayList();
+        playList= MusicStore.getPlayList();
         }
     }
 
