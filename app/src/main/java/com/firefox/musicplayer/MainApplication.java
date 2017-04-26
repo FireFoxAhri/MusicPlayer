@@ -5,6 +5,7 @@ import android.content.Context;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.firefox.musicplayer.bean.Music;
+import com.firefox.musicplayer.database.MusicStore;
 
 import java.util.ArrayList;
 
@@ -33,9 +34,10 @@ public class MainApplication extends Application {
         Fresco.initialize(this);
         context = getApplicationContext();
 
-//        if (playList == null) {
-//        playList= MusicStore.getPlayList();
-//        }
+        if (playList == null) {
+            MusicStore database = new MusicStore(this);
+            playList= MusicStore.getPlayList();
+        }
     }
 
     public static ArrayList<Music> getPlayList() {
