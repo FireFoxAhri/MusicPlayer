@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -56,7 +57,6 @@ public class PlayFragment extends Fragment {
 
         unbinder = ButterKnife.bind(this, view);
         return view;
-
     }
 
     @Override
@@ -65,6 +65,8 @@ public class PlayFragment extends Fragment {
         unbinder.unbind();
 
     }
+
+
 
 
     @OnClick({R.id.btnplaymode, R.id.btnpre, R.id.btnplay, R.id.btnnext, R.id.btnmenu})
@@ -94,6 +96,11 @@ public class PlayFragment extends Fragment {
                 musicPlayService.startPlay(MainApplication.getCurrentIndex()-1);
                 break;
             case R.id.btnplay:
+                if (musicPlayService.startOrPause()) {
+                    btnplay.setImageDrawable(getResources().getDrawable(R.drawable.play_btn_pause));
+                }else {
+                    btnplay.setImageDrawable(getResources().getDrawable(R.drawable.play_btn_play));
+                }
                 break;
             case R.id.btnnext:
                 musicPlayService.startPlay(MainApplication.getCurrentIndex()+1);

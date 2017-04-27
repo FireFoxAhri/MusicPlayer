@@ -62,7 +62,7 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
         return START_STICKY;
     }
 
-    public void startOrPause() {
+    public boolean startOrPause() {
         if (flag_play) {
             mediaPlayer.pause();
             flag_play = false;
@@ -72,6 +72,7 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
             flag_play = true;
             mediaPlayer.start();
         }
+        return flag_play;
     }
 
     public void startPlay(int index) {
