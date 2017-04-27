@@ -16,11 +16,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -31,7 +31,6 @@ import android.widget.Toast;
 import com.firefox.musicplayer.MainApplication;
 import com.firefox.musicplayer.R;
 import com.firefox.musicplayer.bean.Music;
-import com.firefox.musicplayer.database.MusicStore;
 import com.firefox.musicplayer.service.MusicPlayService;
 import com.firefox.musicplayer.ui.SearchActivity;
 import com.firefox.musicplayer.ui.adapter.MusicListMenu_adapter;
@@ -92,8 +91,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
-        MusicStore musicStore = new MusicStore(this);
-        musicStore.updatePlayList(MainApplication.getPlayList());
         super.onDestroy();
         unbindPlayService();
     }
@@ -169,13 +166,14 @@ public class MainActivity extends BaseActivity {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             musicPlayService = ((MusicPlayService.PlayBinder) service).getService();
+            musicPlayService.setInformation();
             isBound = true;
-            Log.v("+++", "bind success");
             Toast.makeText(musicPlayService, "bind success", Toast.LENGTH_SHORT).show();
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
+            isBound = false;
         }
     };
 
@@ -230,6 +228,17 @@ public class MainActivity extends BaseActivity {
         ((ListView) contentView.findViewById(R.id.lv_musiclist)).setAdapter(new MusicListMenu_adapter(this, music));
 
         ((TextView) contentView.findViewById(R.id.mpl_ppw_tv_songnum)).setText("歌曲：" + music.getMusicName());
+        ((ListView) contentView.findViewById(R.id.lv_musiclist)).setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 0:
+                        MainApplication.nextPlay(music);
+                        popupWindow.dismiss();
+                        break;
+                }
+            }
+        });
         contentView.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 int height = contentView.findViewById(R.id.popupwindow).getTop();

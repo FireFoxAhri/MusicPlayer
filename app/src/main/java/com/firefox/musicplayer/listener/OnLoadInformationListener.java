@@ -1,6 +1,8 @@
 package com.firefox.musicplayer.listener;
 
+import com.firefox.musicplayer.bean.Music;
+
 public interface OnLoadInformationListener
 {
-    void onLoadInfrometion(String MusicName, String ArtistName, String LyricUrl, String AlbumPic, boolean isPlaying, boolean isContinue, boolean isLoveMusic);
+    void onLoadInformation(Music music, boolean isPlaying, boolean isContinue);
 }

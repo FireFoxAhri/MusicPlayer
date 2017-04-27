@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
@@ -55,38 +56,36 @@ public class MusicPlayList_adapter extends BaseAdapter {
             ((TextView) convertView.findViewById(R.id.mpl_adapter_tv_songname)).setText(musicPlayList.getPlayList().get(position).getMusicName() + " - " + musicPlayList.getPlayList().get(position).getArtistName());
 
 
-//			((LinearLayout) convertView.findViewById(R.id.mpl_adapter_btn_play)).setOnClickListener(new View.OnClickListener()
-//			{
-//				@Override
-//				public void onClick(View v)
-//				{
-//					musicPlayList.setCurrentIndex (position);
-//					musicPlayService.reset();
-//					musicPlayService.startPlay(musicPlayList.getCurrentIndex());
-//					popupWindow.dismiss();
-//			}
-//			});
+			((LinearLayout) convertView.findViewById(R.id.mpl_adapter_btn_play)).setOnClickListener(new View.OnClickListener()
+			{
+				@Override
+				public void onClick(View v)
+				{
+					musicPlayList.setCurrentIndex (position);
+					musicPlayService.reset();
+					musicPlayService.startPlay(musicPlayList.getCurrentIndex());
+					popupWindow.dismiss();
+			}
+			});
             ((ImageView) convertView.findViewById(R.id.mpl_adapter_btn_delete)).setImageDrawable(context.getResources().getDrawable(R.drawable.play_list_delete));
-//			convertView.findViewById(R.id.mpl_adapter_btn_delete).setOnClickListener(new View.OnClickListener()
-//			{
-//				@Override
-//				public void onClick(View v)
-//				{
-//					if (position > musicPlayList.getCurrentIndex()) ;
-//					else if (position == musicPlayList.getCurrentIndex())
-//					{
-//						if (musicPlayList.getCurrentIndex() > musicPlayList.getMusicList().size() - 1)
-//							musicPlayList.setCurrentIndex(musicPlayList.getMusicList().size() - 1);
-//						musicPlayService.reset();
-//					} else
-//						musicPlayList.setCurrentIndex(musicPlayList.getCurrentIndex() - 1);
-//					musicPlayList.getMusicList().remove(position);
-//					notifyDataSetChanged();
-//					((TextView) popupWindow.getContentView().findViewById(R.id.mpl_ppw_tv_songnum)).setText("播放列表(" + musicPlayList.getMusicList().size() + ")");
-//				}
-//			});
-
-
+			convertView.findViewById(R.id.mpl_adapter_btn_delete).setOnClickListener(new View.OnClickListener()
+			{
+				@Override
+				public void onClick(View v)
+				{
+					if (position > musicPlayList.getCurrentIndex()) ;
+					else if (position == musicPlayList.getCurrentIndex())
+					{
+						if (musicPlayList.getCurrentIndex() >MainApplication.getPlayList().size() - 1)
+							musicPlayList.setCurrentIndex(MainApplication.getPlayList().size() - 1);
+						musicPlayService.reset();
+					} else
+						musicPlayList.setCurrentIndex(musicPlayList.getCurrentIndex() - 1);
+                    MainApplication.getPlayList().remove(position);
+					notifyDataSetChanged();
+					((TextView) popupWindow.getContentView().findViewById(R.id.mpl_ppw_tv_songnum)).setText("播放列表(" + MainApplication.getPlayList().size() + ")");
+				}
+			});
             if (position == musicPlayList.getCurrentIndex())
                 ((ImageView) convertView.findViewById(R.id.mpl_adapter_iv_isplaying)).setImageDrawable(context.getResources().getDrawable(R.drawable.play_playlist_icn_playing));
             else

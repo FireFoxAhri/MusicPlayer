@@ -82,7 +82,6 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
             try {
                 flag_play = true;
                 flag_continue = false;
-                MainApplication.setCurrentIndex(index);
                 mediaPlayer.reset();
                 mediaPlayer.setDataSource(playList.get(index).getMusicURL());
                 mediaPlayer.prepare();
@@ -97,6 +96,10 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
         }
     }
 
+    public void reset() {
+        mediaPlayer.reset();
+        setInformation();
+    }
 
     public class PlayBinder extends Binder {
 
@@ -112,6 +115,12 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
 
     @Override
     public void onCompletion(MediaPlayer mp) {
+        int nextIndex = MainApplication.getNextIndex();
+        if (nextIndex != -1) {
+            startPlay(nextIndex);
+            MainApplication.setNextIndex(-1);
+            return;
+        }
         ArrayList<Music> playList = MainApplication.getPlayList();
         int currentIndex = MainApplication.getCurrentIndex();
         switch (playMode) {
@@ -119,11 +128,9 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
                 startPlay(++currentIndex);
                 break;
             case RANDOM_PLAY://随机播放
-                mediaPlayer.reset();
                 startPlay(new Random().nextInt(playList.size()));
                 break;
             case SINGLE_PLAY://单曲循环
-                mediaPlayer.reset();
                 startPlay(currentIndex);
                 break;
         }
@@ -152,13 +159,25 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
     }
 
     @Override
-    public void onDestroy()
-    {
-        if (mediaPlayer.isPlaying())
-        {
+    public void onDestroy() {
+        if (mediaPlayer.isPlaying()) {
             mediaPlayer.stop();
         }
         mediaPlayer.release();
         unregisterReceiver(myReceiver);
+    }
+
+    public void setOnLoadInformationListener(OnLoadInformationListener onLoadInformationListener) {
+        this.onLoadInformationListener = onLoadInformationListener;
+    }
+
+
+    public void setInformation() {
+        int index = MainApplication.getCurrentIndex();
+        if (onLoadInformationListener != null && index >= 0 && index < MainApplication.getPlayList().size()) {
+            onLoadInformationListener.onLoadInformation(MainApplication.getPlayList().get(index), flag_play, flag_continue);
+        } else if (onLoadInformationListener != null && MainApplication.getPlayList().size() == 0) {
+            onLoadInformationListener.onLoadInformation(null, flag_play, flag_continue);
+        }
     }
 }

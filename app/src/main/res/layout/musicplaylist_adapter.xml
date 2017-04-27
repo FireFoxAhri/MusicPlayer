@@ -46,7 +46,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="9"
-            android:src="@drawable/btn_icn_add"
+
             android:scaleType="centerInside"/>
     </LinearLayout>
 </LinearLayout>
