@@ -26,7 +26,7 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
     private OnProgressListener onProgressListener;
     private OnLoadInformationListener onLoadInformationListener;
     static MediaPlayer mediaPlayer;
-
+    MyReceiver myReceiver = new MyReceiver();
     public static final int ORDER_PLAY = 0;//顺序播放
     public static final int RANDOM_PLAY = 1;//随机播放
     public static final int SINGLE_PLAY = 2;//单曲循环
@@ -51,7 +51,7 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setOnCompletionListener(this);
 
-        MyReceiver myReceiver = new MyReceiver();
+
         IntentFilter filter = new IntentFilter();
         filter.addAction("start");
         registerReceiver(myReceiver, filter);
@@ -148,5 +148,16 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
                 e.printStackTrace();
             }
         }
+    }
+
+    @Override
+    public void onDestroy()
+    {
+        if (mediaPlayer.isPlaying())
+        {
+            mediaPlayer.stop();
+        }
+        mediaPlayer.release();
+        unregisterReceiver(myReceiver);
     }
 }

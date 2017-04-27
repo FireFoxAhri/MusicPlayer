@@ -31,6 +31,7 @@ import android.widget.Toast;
 import com.firefox.musicplayer.MainApplication;
 import com.firefox.musicplayer.R;
 import com.firefox.musicplayer.bean.Music;
+import com.firefox.musicplayer.database.MusicStore;
 import com.firefox.musicplayer.service.MusicPlayService;
 import com.firefox.musicplayer.ui.SearchActivity;
 import com.firefox.musicplayer.ui.adapter.MusicListMenu_adapter;
@@ -91,6 +92,8 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
+        MusicStore musicStore = new MusicStore(this);
+        musicStore.updatePlayList(MainApplication.getPlayList());
         super.onDestroy();
         unbindPlayService();
     }
@@ -166,14 +169,13 @@ public class MainActivity extends BaseActivity {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             musicPlayService = ((MusicPlayService.PlayBinder) service).getService();
-            isBound=true;
+            isBound = true;
             Log.v("+++", "bind success");
             Toast.makeText(musicPlayService, "bind success", Toast.LENGTH_SHORT).show();
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            isBound = false;
         }
     };
 
@@ -194,24 +196,20 @@ public class MainActivity extends BaseActivity {
     public MusicPlayService getMusicPlayService() {
         return musicPlayService;
     }
-    public void showMusicPlayList(View location, View view)
-    {
+
+    public void showMusicPlayList(View location, View view) {
         final View contentView = LayoutInflater.from(this).inflate(R.layout.musicplaylist_popupwindow, null);
         final PopupWindow popupWindow = new PopupWindow(contentView, LinearLayout.LayoutParams.MATCH_PARENT, 1200, true);
         popupWindow.setAnimationStyle(R.style.AnimBottom);
         popupWindow.setTouchable(true);
         popupWindow.setBackgroundDrawable(new BitmapDrawable());
         ((ListView) contentView.findViewById(R.id.lv_musiclist)).setAdapter(new MusicPlayList_adapter(this, musicPlayService, popupWindow));
-        contentView.setOnTouchListener(new View.OnTouchListener()
-        {
-            public boolean onTouch(View v, MotionEvent event)
-            {
+        contentView.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent event) {
                 int height = contentView.findViewById(R.id.popupwindow).getTop();
                 int y = (int) event.getY();
-                if (event.getAction() == MotionEvent.ACTION_UP)
-                {
-                    if (y < height)
-                    {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (y < height) {
                         popupWindow.dismiss();
                     }
                 }
@@ -222,6 +220,7 @@ public class MainActivity extends BaseActivity {
         popupWindow.showAtLocation(location, Gravity.BOTTOM, 0, 0);
         popupWindow.showAsDropDown(view);
     }
+
     public void showMenu(View view, final Music music, ListView listView) {
         final View contentView = LayoutInflater.from(this).inflate(R.layout.musicplaylist_popupwindow, null);
         final PopupWindow popupWindow = new PopupWindow(contentView, LinearLayout.LayoutParams.MATCH_PARENT, 800, true);

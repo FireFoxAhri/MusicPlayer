@@ -11,6 +11,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.firefox.musicplayer.MainApplication;
 import com.firefox.musicplayer.R;
 import com.firefox.musicplayer.service.MusicPlayService;
 import com.firefox.musicplayer.ui.main.MainActivity;
@@ -100,9 +101,6 @@ public class PlayFragment extends Fragment {
             case R.id.btnmenu:
                 //Toast.makeText(musicPlayService, "btnMenu被点击", Toast.LENGTH_SHORT).show();
                 mainActivity.showMusicPlayList(mainActivity.findViewById(R.id.player), view);
-
-
-
                 break;
         }
     }
