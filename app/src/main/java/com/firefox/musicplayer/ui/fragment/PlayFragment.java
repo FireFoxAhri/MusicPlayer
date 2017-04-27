@@ -90,10 +90,12 @@ public class PlayFragment extends Fragment {
                 }
                 break;
             case R.id.btnpre:
+                musicPlayService.startPlay(MainApplication.getCurrentIndex()-1);
                 break;
             case R.id.btnplay:
                 break;
             case R.id.btnnext:
+                musicPlayService.startPlay(MainApplication.getCurrentIndex()+1);
                 break;
             case R.id.btnmenu:
                 //Toast.makeText(musicPlayService, "btnMenu被点击", Toast.LENGTH_SHORT).show();

@@ -16,6 +16,7 @@ import java.util.ArrayList;
 public class MainApplication extends Application {
     private static Context context;
     private static ArrayList<Music> playList = null;
+    private static int currentIndex=0;
 
     public static int getCurrentIndex() {
         return currentIndex;
@@ -25,7 +26,7 @@ public class MainApplication extends Application {
         MainApplication.currentIndex = currentIndex;
     }
 
-    private static int currentIndex=0;
+
 
     @Override
     public void onCreate() {

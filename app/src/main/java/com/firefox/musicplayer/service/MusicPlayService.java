@@ -62,6 +62,18 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
         return START_STICKY;
     }
 
+    public void startOrPause() {
+        if (flag_play) {
+            mediaPlayer.pause();
+            flag_play = false;
+            flag_continue = true;
+        } else if (flag_continue) {
+            flag_continue = false;
+            flag_play = true;
+            mediaPlayer.start();
+        }
+    }
+
     public void startPlay(int index) {
         ArrayList<Music> playList = MainApplication.getPlayList();
         int currentIndex = MainApplication.getCurrentIndex();
@@ -69,6 +81,7 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
             try {
                 flag_play = true;
                 flag_continue = false;
+                MainApplication.setCurrentIndex(index);
                 mediaPlayer.reset();
                 mediaPlayer.setDataSource(playList.get(index).getMusicURL());
                 mediaPlayer.prepare();
