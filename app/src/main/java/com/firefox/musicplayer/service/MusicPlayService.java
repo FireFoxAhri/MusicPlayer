@@ -4,11 +4,10 @@ import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.media.MediaPlayer;
 import android.os.Binder;
 import android.os.IBinder;
-import android.support.annotation.IntDef;
-import android.support.annotation.Nullable;
 
 import com.firefox.musicplayer.MainApplication;
 import com.firefox.musicplayer.bean.Music;
@@ -16,7 +15,6 @@ import com.firefox.musicplayer.listener.OnLoadInformationListener;
 import com.firefox.musicplayer.listener.OnProgressListener;
 
 import java.io.IOException;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -52,6 +50,11 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
         super.onCreate();
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setOnCompletionListener(this);
+
+        MyReceiver myReceiver = new MyReceiver();
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("start");
+        registerReceiver(myReceiver, filter);
     }
 
     @Override
@@ -96,7 +99,7 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
     @Override
     public void onCompletion(MediaPlayer mp) {
         ArrayList<Music> playList = MainApplication.getPlayList();
-        int currentIndex=MainApplication.getCurrentIndex();
+        int currentIndex = MainApplication.getCurrentIndex();
         switch (playMode) {
             case ORDER_PLAY://顺序播放
                 startPlay(++currentIndex);
@@ -116,7 +119,7 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
         @Override
         public void onReceive(Context context, Intent intent) {
             ArrayList<Music> playList = MainApplication.getPlayList();
-            int currentIndex = MainApplication.getCurrentIndex();
+            int currentIndex = 0;
             try {
                 if (intent.getAction().equals("start")) {
                     Music music = (Music) intent.getSerializableExtra("music");

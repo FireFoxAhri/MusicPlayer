@@ -25,7 +25,7 @@
             android:layout_height="40sp"
             android:layout_weight="1"
             android:background="@android:color/white"
-            android:text="歌单"
+            android:text="喜欢的音乐"
             android:textAlignment="center"
             android:textColor="@color/font_gray" />
 

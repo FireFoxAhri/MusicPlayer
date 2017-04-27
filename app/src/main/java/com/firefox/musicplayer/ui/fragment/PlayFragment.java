@@ -1,6 +1,5 @@
 package com.firefox.musicplayer.ui.fragment;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,7 +11,6 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.firefox.musicplayer.MainApplication;
 import com.firefox.musicplayer.R;
 import com.firefox.musicplayer.service.MusicPlayService;
 import com.firefox.musicplayer.ui.main.MainActivity;
@@ -27,7 +25,6 @@ import butterknife.Unbinder;
  */
 
 public class PlayFragment extends Fragment {
-    Context context=null;
 
     @BindView(R.id.ptv_SongName)
     TextView ptvSongName;
@@ -99,6 +96,11 @@ public class PlayFragment extends Fragment {
             case R.id.btnnext:
                 break;
             case R.id.btnmenu:
+                //Toast.makeText(musicPlayService, "btnMenu被点击", Toast.LENGTH_SHORT).show();
+                mainActivity.showMusicPlayList(mainActivity.findViewById(R.id.player), view);
+
+
+
                 break;
         }
     }
