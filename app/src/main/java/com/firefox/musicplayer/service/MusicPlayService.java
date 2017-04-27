@@ -7,7 +7,9 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.media.MediaPlayer;
 import android.os.Binder;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.Message;
 
 import com.firefox.musicplayer.MainApplication;
 import com.firefox.musicplayer.bean.Music;
@@ -180,4 +182,48 @@ public class MusicPlayService extends Service implements MediaPlayer.OnCompletio
             onLoadInformationListener.onLoadInformation(null, flag_play, flag_continue);
         }
     }
+
+
+    //进度条监听器
+    public void setOnProgressListener(OnProgressListener onProgressListener)
+    {
+        this.onProgressListener = onProgressListener;
+    }
+
+    public void setProgress()
+    {
+        new Thread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                while (true)
+                {
+                    if (onProgressListener != null && flag_play == true)
+                    {
+                        handler.sendEmptyMessage(1);
+                    }
+                    try
+                    {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+
+    private Handler handler = new Handler()
+    {
+        @Override
+        public void handleMessage(Message msg)
+        {
+            if (msg.what == 1)
+            {
+                onProgressListener.onProgress(mediaPlayer.getCurrentPosition(), mediaPlayer.getDuration());
+            }
+        }
+    };
 }
